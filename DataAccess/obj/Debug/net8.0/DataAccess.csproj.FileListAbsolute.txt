@@ -1,0 +1,15 @@
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\bin\Debug\net8.0\DataAccess.dll
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\DataAccess.dll
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll

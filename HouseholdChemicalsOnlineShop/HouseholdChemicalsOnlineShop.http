@@ -1,6 +1,0 @@
-@HouseholdChemicalsOnlineShop_HostAddress = http://localhost:5100
-
-GET {{HouseholdChemicalsOnlineShop_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

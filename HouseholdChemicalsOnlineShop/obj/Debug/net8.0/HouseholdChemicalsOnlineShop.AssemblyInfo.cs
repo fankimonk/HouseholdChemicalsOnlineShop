@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HouseholdChemicalsOnlineShop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+81dd7a67754b78511ab6e99524a439d75a135ca7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93b54b575ca8eeaeadf26904ad624ebbde308a92")]
 [assembly: System.Reflection.AssemblyProductAttribute("HouseholdChemicalsOnlineShop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HouseholdChemicalsOnlineShop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
