@@ -32,7 +32,10 @@ namespace API.Controllers
         public async Task<IActionResult> Login(LoginUserRequest request)
         {
             var token = await _usersService.Login(request.Email, request.Password);
-            return Ok(token);
+
+            HttpContext.Response.Cookies.Append("tasty-cookies", token);
+
+            return Ok();
         }
     }
 }

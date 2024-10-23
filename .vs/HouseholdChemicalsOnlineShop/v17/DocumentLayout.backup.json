@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\repositiories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositiories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|solutionrelative:api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\extensions\\apiextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|solutionrelative:api\\extensions\\apiextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|solutionrelative:api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\utils\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|solutionrelative:api\\utils\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|solutionrelative:api\\services\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|solutionrelative:api\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|solutionrelative:api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\utils\\jwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,20 +39,24 @@
       "RelativeMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|solutionrelative:api\\interfaces\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\utils\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|solutionrelative:api\\utils\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\mappers\\productmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\mappers\\productmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\mappers\\categorymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\mappers\\categorymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\mappers\\brandmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\mappers\\brandmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\repositiories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositiories\\usersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\repositiories\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositiories\\productsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|solutionrelative:api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\mappers\\productmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\mappers\\productmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3054AA88-9A98-497E-8237-97C44D4633AD}|API\\API.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\api\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\dtos\\product\\createproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dtos\\product\\createproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\mappers\\categorymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\mappers\\categorymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\dtos\\brand\\createbrandrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -85,10 +93,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\dtos\\product\\updateproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dtos\\product\\updateproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\mappers\\brandmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\mappers\\brandmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2D2E34E-4A9E-44DD-ADD6-A98E58E5D5BA}|DataAccess\\DataAccess.csproj|c:\\dev\\web\\householdchemicalsonlineshop\\dataaccess\\repositiories\\brandsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -130,323 +134,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Program.cs",
-              "RelativeDocumentMoniker": "API\\Program.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Program.cs",
-              "RelativeToolTip": "API\\Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAoAAABcAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ApiExtensions.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Extensions\\ApiExtensions.cs",
+              "RelativeDocumentMoniker": "API\\Extensions\\ApiExtensions.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Extensions\\ApiExtensions.cs",
+              "RelativeToolTip": "API\\Extensions\\ApiExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:39:05.427Z",
+              "WhenOpened": "2024-10-23T21:23:32.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "CategoriesController.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Controllers\\CategoriesController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\CategoriesController.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Controllers\\CategoriesController.cs",
-              "RelativeToolTip": "API\\Controllers\\CategoriesController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:10:25.163Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "API\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACYAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:10:25.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ProductMapper.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Mappers\\ProductMapper.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Mappers\\ProductMapper.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Mappers\\ProductMapper.cs",
-              "RelativeToolTip": "DataAccess\\Mappers\\ProductMapper.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAQwB8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:05:13.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProductsRepository.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Repositiories\\ProductsRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositiories\\ProductsRepository.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Repositiories\\ProductsRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositiories\\ProductsRepository.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:19:34.917Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PasswordHasher.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Utils\\PasswordHasher.cs",
-              "RelativeDocumentMoniker": "API\\Utils\\PasswordHasher.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Utils\\PasswordHasher.cs",
-              "RelativeToolTip": "API\\Utils\\PasswordHasher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:21:36.765Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UsersService.cs",
               "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Services\\UsersService.cs",
               "RelativeDocumentMoniker": "API\\Services\\UsersService.cs",
               "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Services\\UsersService.cs",
               "RelativeToolTip": "API\\Services\\UsersService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T19:05:36.688Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "API\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "API\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:03:55.278Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UsersRepository.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Repositiories\\UsersRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositiories\\UsersRepository.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Repositiories\\UsersRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositiories\\UsersRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:09:36.732Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\appsettings.json",
               "RelativeDocumentMoniker": "API\\appsettings.json",
               "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\appsettings.json",
               "RelativeToolTip": "API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-10-23T19:24:30.828Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "JwtProvider.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Utils\\JwtProvider.cs",
-              "RelativeDocumentMoniker": "API\\Utils\\JwtProvider.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Utils\\JwtProvider.cs",
-              "RelativeToolTip": "API\\Utils\\JwtProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "API\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:22:18.994Z",
+              "WhenOpened": "2024-10-23T19:03:55.278Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IJwtProvider.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Interfaces\\IJwtProvider.cs",
-              "RelativeDocumentMoniker": "API\\Interfaces\\IJwtProvider.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Interfaces\\IJwtProvider.cs",
-              "RelativeToolTip": "API\\Interfaces\\IJwtProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:37:18.325Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CreateProductRequest.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Product\\CreateProductRequest.cs",
-              "RelativeDocumentMoniker": "DataAccess\\DTOs\\Product\\CreateProductRequest.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Product\\CreateProductRequest.cs",
-              "RelativeToolTip": "DataAccess\\DTOs\\Product\\CreateProductRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:04:31.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CategoryMapper.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Mappers\\CategoryMapper.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Mappers\\CategoryMapper.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Mappers\\CategoryMapper.cs",
-              "RelativeToolTip": "DataAccess\\Mappers\\CategoryMapper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:05:08.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CreateBrandRequest.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Brand\\CreateBrandRequest.cs",
-              "RelativeDocumentMoniker": "DataAccess\\DTOs\\Brand\\CreateBrandRequest.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Brand\\CreateBrandRequest.cs",
-              "RelativeToolTip": "DataAccess\\DTOs\\Brand\\CreateBrandRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:04:53.362Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "JwtOptions.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Utils\\JwtOptions.cs",
-              "RelativeDocumentMoniker": "API\\Utils\\JwtOptions.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Utils\\JwtOptions.cs",
-              "RelativeToolTip": "API\\Utils\\JwtOptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:33:33.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\User.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Models\\User.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\User.cs",
-              "RelativeToolTip": "DataAccess\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:06:58.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IPasswordHasher.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Interfaces\\IPasswordHasher.cs",
-              "RelativeDocumentMoniker": "API\\Interfaces\\IPasswordHasher.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Interfaces\\IPasswordHasher.cs",
-              "RelativeToolTip": "API\\Interfaces\\IPasswordHasher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:22:01.82Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LoginUserRequest.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\User\\LoginUserRequest.cs",
-              "RelativeDocumentMoniker": "DataAccess\\DTOs\\User\\LoginUserRequest.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\User\\LoginUserRequest.cs",
-              "RelativeToolTip": "DataAccess\\DTOs\\User\\LoginUserRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:16:44.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "RegisterUserRequest.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\User\\RegisterUserRequest.cs",
-              "RelativeDocumentMoniker": "DataAccess\\DTOs\\User\\RegisterUserRequest.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\User\\RegisterUserRequest.cs",
-              "RelativeToolTip": "DataAccess\\DTOs\\User\\RegisterUserRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:04:14.047Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UpdateProductRequest.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Product\\UpdateProductRequest.cs",
-              "RelativeDocumentMoniker": "DataAccess\\DTOs\\Product\\UpdateProductRequest.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Product\\UpdateProductRequest.cs",
-              "RelativeToolTip": "DataAccess\\DTOs\\Product\\UpdateProductRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:04:15.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "BrandsRepository.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Repositiories\\BrandsRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositiories\\BrandsRepository.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Repositiories\\BrandsRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositiories\\BrandsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:10:22.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\Product.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Models\\Product.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\Product.cs",
-              "RelativeToolTip": "DataAccess\\Models\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:07:46.432Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Models\\Category.cs",
-              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\Category.cs",
-              "RelativeToolTip": "DataAccess\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:07:47.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 11,
               "Title": "BrandMapper.cs",
               "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Mappers\\BrandMapper.cs",
               "RelativeDocumentMoniker": "DataAccess\\Mappers\\BrandMapper.cs",
@@ -459,7 +203,266 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Program.cs",
+              "RelativeToolTip": "API\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAADUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:39:05.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IJwtProvider.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Interfaces\\IJwtProvider.cs",
+              "RelativeDocumentMoniker": "API\\Interfaces\\IJwtProvider.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Interfaces\\IJwtProvider.cs",
+              "RelativeToolTip": "API\\Interfaces\\IJwtProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:37:18.325Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "JwtProvider.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Utils\\JwtProvider.cs",
+              "RelativeDocumentMoniker": "API\\Utils\\JwtProvider.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Utils\\JwtProvider.cs",
+              "RelativeToolTip": "API\\Utils\\JwtProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:22:18.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "API\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:10:25.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Utils\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "API\\Utils\\PasswordHasher.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Utils\\PasswordHasher.cs",
+              "RelativeToolTip": "API\\Utils\\PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:21:36.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductMapper.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Mappers\\ProductMapper.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Mappers\\ProductMapper.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Mappers\\ProductMapper.cs",
+              "RelativeToolTip": "DataAccess\\Mappers\\ProductMapper.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwBgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:05:13.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UsersRepository.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Repositiories\\UsersRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositiories\\UsersRepository.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Repositiories\\UsersRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositiories\\UsersRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:09:36.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "API\\Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACYAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:10:25.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ProductsRepository.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Repositiories\\ProductsRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositiories\\ProductsRepository.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Repositiories\\ProductsRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositiories\\ProductsRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:19:34.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CategoryMapper.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Mappers\\CategoryMapper.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Mappers\\CategoryMapper.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Mappers\\CategoryMapper.cs",
+              "RelativeToolTip": "DataAccess\\Mappers\\CategoryMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:05:08.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CreateProductRequest.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Product\\CreateProductRequest.cs",
+              "RelativeDocumentMoniker": "DataAccess\\DTOs\\Product\\CreateProductRequest.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Product\\CreateProductRequest.cs",
+              "RelativeToolTip": "DataAccess\\DTOs\\Product\\CreateProductRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:04:31.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CreateBrandRequest.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Brand\\CreateBrandRequest.cs",
+              "RelativeDocumentMoniker": "DataAccess\\DTOs\\Brand\\CreateBrandRequest.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Brand\\CreateBrandRequest.cs",
+              "RelativeToolTip": "DataAccess\\DTOs\\Brand\\CreateBrandRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:04:53.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "JwtOptions.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Utils\\JwtOptions.cs",
+              "RelativeDocumentMoniker": "API\\Utils\\JwtOptions.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Utils\\JwtOptions.cs",
+              "RelativeToolTip": "API\\Utils\\JwtOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:33:33.196Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\User.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\User.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\User.cs",
+              "RelativeToolTip": "DataAccess\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:06:58.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IPasswordHasher.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Interfaces\\IPasswordHasher.cs",
+              "RelativeDocumentMoniker": "API\\Interfaces\\IPasswordHasher.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\API\\Interfaces\\IPasswordHasher.cs",
+              "RelativeToolTip": "API\\Interfaces\\IPasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:22:01.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LoginUserRequest.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\User\\LoginUserRequest.cs",
+              "RelativeDocumentMoniker": "DataAccess\\DTOs\\User\\LoginUserRequest.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\User\\LoginUserRequest.cs",
+              "RelativeToolTip": "DataAccess\\DTOs\\User\\LoginUserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:16:44.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "RegisterUserRequest.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\User\\RegisterUserRequest.cs",
+              "RelativeDocumentMoniker": "DataAccess\\DTOs\\User\\RegisterUserRequest.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\User\\RegisterUserRequest.cs",
+              "RelativeToolTip": "DataAccess\\DTOs\\User\\RegisterUserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:04:14.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UpdateProductRequest.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Product\\UpdateProductRequest.cs",
+              "RelativeDocumentMoniker": "DataAccess\\DTOs\\Product\\UpdateProductRequest.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Product\\UpdateProductRequest.cs",
+              "RelativeToolTip": "DataAccess\\DTOs\\Product\\UpdateProductRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:04:15.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BrandsRepository.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Repositiories\\BrandsRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositiories\\BrandsRepository.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Repositiories\\BrandsRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositiories\\BrandsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:10:22.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Product.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\Product.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:07:46.432Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 25,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Category.cs",
+              "ToolTip": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\Category.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T19:07:47.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "Brand.cs",
               "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\Models\\Brand.cs",
               "RelativeDocumentMoniker": "DataAccess\\Models\\Brand.cs",
@@ -467,12 +470,11 @@
               "RelativeToolTip": "DataAccess\\Models\\Brand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:07:47.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T19:07:47.607Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "ProductDTO.cs",
               "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Product\\ProductDTO.cs",
               "RelativeDocumentMoniker": "DataAccess\\DTOs\\Product\\ProductDTO.cs",
@@ -480,12 +482,11 @@
               "RelativeToolTip": "DataAccess\\DTOs\\Product\\ProductDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:04:24.319Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T19:04:24.319Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "UpdateCategoryRequest.cs",
               "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Category\\UpdateCategoryRequest.cs",
               "RelativeDocumentMoniker": "DataAccess\\DTOs\\Category\\UpdateCategoryRequest.cs",
@@ -493,12 +494,11 @@
               "RelativeToolTip": "DataAccess\\DTOs\\Category\\UpdateCategoryRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:04:36.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T19:04:36.956Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "CreateCategoryRequest.cs",
               "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Category\\CreateCategoryRequest.cs",
               "RelativeDocumentMoniker": "DataAccess\\DTOs\\Category\\CreateCategoryRequest.cs",
@@ -506,12 +506,11 @@
               "RelativeToolTip": "DataAccess\\DTOs\\Category\\CreateCategoryRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:04:42.159Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T19:04:42.159Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "UpdateBrandRequest.cs",
               "DocumentMoniker": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\DataAccess\\DTOs\\Brand\\UpdateBrandRequest.cs",
               "RelativeDocumentMoniker": "DataAccess\\DTOs\\Brand\\UpdateBrandRequest.cs",
@@ -519,8 +518,7 @@
               "RelativeToolTip": "DataAccess\\DTOs\\Brand\\UpdateBrandRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T19:04:48.148Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T19:04:48.148Z"
             }
           ]
         }
