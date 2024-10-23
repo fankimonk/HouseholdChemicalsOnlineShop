@@ -14,4 +14,12 @@ namespace DataAccess.Configurations
             builder.HasOne(p => p.Brand).WithMany(b => b.Products).HasForeignKey(p => p.BrandId);
         }
     }
+
+    public class UsersConfiguration : IEntityTypeConfiguration<User>
+    {
+        public void Configure(EntityTypeBuilder<User> builder)
+        {
+            builder.HasKey(u => u.Id);
+        }
+    }
 }

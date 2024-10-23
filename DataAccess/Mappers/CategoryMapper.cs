@@ -6,7 +6,7 @@ namespace DataAccess.Mappers
 {
     public static class CategoryMapper
     {
-        public static CategoryDTO ToDefaultDTO(this Category category)
+        public static CategoryDTO ToDTO(this Category category)
         {
             return new CategoryDTO
             {
@@ -15,7 +15,7 @@ namespace DataAccess.Mappers
             };
         }
 
-        public static Category ToCategory(this CreateCategoryDTO categoryDTO)
+        public static Category ToCategory(this CreateCategoryRequest categoryDTO)
         {
             return new Category
             {
@@ -23,7 +23,7 @@ namespace DataAccess.Mappers
             };
         }
 
-        public static Category ToCategory(this UpdateCategoryDTO categoryDTO)
+        public static Category ToCategory(this UpdateCategoryRequest categoryDTO)
         {
             return new Category
             {
