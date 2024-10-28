@@ -13,7 +13,7 @@ namespace DataAccess.Repositiories
             _dbContext = dbContext;
         }
 
-        public async Task<Category?> CreateAsync(Category category)
+        public async Task<CategoryEntity?> CreateAsync(CategoryEntity category)
         {
             if (category == null) return null;
             await _dbContext.Categories.AddAsync(category);
@@ -27,17 +27,17 @@ namespace DataAccess.Repositiories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<Category>> GetAllAsync()
+        public async Task<List<CategoryEntity>> GetAllAsync()
         {
             return await _dbContext.Categories.AsNoTracking().ToListAsync();
         }
 
-        public async Task<Category?> GetByIdAsync(int id)
+        public async Task<CategoryEntity?> GetByIdAsync(int id)
         {
             return await _dbContext.Categories.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        public async Task<Category?> UpdateAsync(int id, Category category)
+        public async Task<CategoryEntity?> UpdateAsync(int id, CategoryEntity category)
         {
             var affectedRows = await _dbContext.Categories.Where(c => c.Id == id).ExecuteUpdateAsync(s => s
                 .SetProperty(c => c.Name, category.Name));

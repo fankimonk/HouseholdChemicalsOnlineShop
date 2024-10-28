@@ -13,7 +13,7 @@ namespace DataAccess.Repositiories
             _dbContext = dbContext;
         }
 
-        public async Task<Product?> CreateAsync(Product product)
+        public async Task<ProductEntity?> CreateAsync(ProductEntity product)
         {
             if (product == null) return null;
             await _dbContext.Products.AddAsync(product);
@@ -27,17 +27,17 @@ namespace DataAccess.Repositiories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<Product>> GetAllAsync()
+        public async Task<List<ProductEntity>> GetAllAsync()
         {
             return await _dbContext.Products.AsNoTracking().ToListAsync();
         }
 
-        public async Task<Product?> GetByIdAsync(int id)
+        public async Task<ProductEntity?> GetByIdAsync(int id)
         {
             return await _dbContext.Products.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task<Product?> UpdateAsync(int id, Product product)
+        public async Task<ProductEntity?> UpdateAsync(int id, ProductEntity product)
         {
             var affectedRows = await _dbContext.Products.Where(p => p.Id == id).ExecuteUpdateAsync(s => s
                 .SetProperty(p => p.Name, product.Name)

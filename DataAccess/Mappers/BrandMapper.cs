@@ -5,7 +5,7 @@ namespace DataAccess.Mappers
 {
     public static class BrandMapper
     {
-        public static BrandDTO ToDTO(this Brand brand)
+        public static BrandDTO ToDTO(this BrandEntity brand)
         {
             return new BrandDTO
             {
@@ -14,17 +14,17 @@ namespace DataAccess.Mappers
             };
         }
 
-        public static Brand ToBrand(this CreateBrandRequest brandDTO)
+        public static BrandEntity ToBrand(this CreateBrandRequest brandDTO)
         {
-            return new Brand
+            return new BrandEntity
             {
                 Name = brandDTO.Name
             };
         }
 
-        public static Brand ToBrand(this UpdateBrandRequest brandDTO)
+        public static BrandEntity ToBrand(this UpdateBrandRequest brandDTO)
         {
-            return new Brand
+            return new BrandEntity
             {
                 Name = brandDTO.Name
             };

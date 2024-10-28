@@ -4,10 +4,10 @@ namespace DataAccess.Interfaces
 {
     public interface IProductsRepository
     {
-        Task<List<Product>> GetAllAsync();
-        Task<Product?> GetByIdAsync(int id);
-        Task<Product?> CreateAsync(Product product);
-        Task<Product?> UpdateAsync(int id, Product product);
+        Task<List<ProductEntity>> GetAllAsync();
+        Task<ProductEntity?> GetByIdAsync(int id);
+        Task<ProductEntity?> CreateAsync(ProductEntity product);
+        Task<ProductEntity?> UpdateAsync(int id, ProductEntity product);
         Task DeleteAsync(int id);
     }
 }

@@ -18,7 +18,7 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        [Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetAll()
         {
             var products = await _productsRepo.GetAllAsync();
@@ -27,6 +27,7 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var product = await _productsRepo.GetByIdAsync(id);
@@ -36,6 +37,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Create([FromBody] CreateProductRequest productDTO)
         {
             var product = await _productsRepo.CreateAsync(productDTO.ToProduct());
@@ -44,6 +46,7 @@ namespace API.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateProductRequest productDTO)
         {
             var product = await _productsRepo.UpdateAsync(id, productDTO.ToProduct());
@@ -52,6 +55,7 @@ namespace API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             await _productsRepo.DeleteAsync(id);

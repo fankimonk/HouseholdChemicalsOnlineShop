@@ -1,4 +1,5 @@
 ﻿using API.Interfaces;
+using DataAccess;
 using DataAccess.Models;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -12,9 +13,9 @@ namespace API.Utils
     {
         private readonly JwtOptions _options = options.Value;
 
-        public string GenerateToken(User user)
+        public string GenerateToken(UserEntity user)
         {
-            Claim[] claims = [new("userId", user.Id.ToString())];
+            Claim[] claims = [new(CustomClaims.UserId, user.Id.ToString())];
 
             var signingCredentials = new SigningCredentials(
                 new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.SecretKey)),

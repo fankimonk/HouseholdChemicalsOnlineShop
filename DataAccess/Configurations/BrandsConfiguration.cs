@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataAccess.Configurations
 {
-    public class BrandsConfiguration : IEntityTypeConfiguration<Brand>
+    public class BrandsConfiguration : IEntityTypeConfiguration<BrandEntity>
     {
-        public void Configure(EntityTypeBuilder<Brand> builder)
+        public void Configure(EntityTypeBuilder<BrandEntity> builder)
         {
             builder.HasKey(b => b.Id);
 

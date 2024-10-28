@@ -2,7 +2,7 @@
 
 namespace DataAccess.Models
 {
-    public class Product
+    public class ProductEntity
     {
         public int Id { get; set; }
 
@@ -16,9 +16,9 @@ namespace DataAccess.Models
         public int StockQuantity { get; set; }
 
         public int CategoryId { get; set; }
-        public Category? Category { get; set; }
+        public CategoryEntity? Category { get; set; }
 
         public int BrandId { get; set; }
-        public Brand? Brand { get; set; }
+        public BrandEntity? Brand { get; set; }
     }
 }

@@ -13,7 +13,7 @@ namespace DataAccess.Repositiories
             _dbContext = dbContext;
         }
 
-        public async Task<Brand?> CreateAsync(Brand brand)
+        public async Task<BrandEntity?> CreateAsync(BrandEntity brand)
         {
             if (brand == null) return null;
             await _dbContext.Brands.AddAsync(brand);
@@ -27,17 +27,17 @@ namespace DataAccess.Repositiories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<Brand>> GetAllAsync()
+        public async Task<List<BrandEntity>> GetAllAsync()
         {
             return await _dbContext.Brands.AsNoTracking().ToListAsync();
         }
 
-        public async Task<Brand?> GetByIdAsync(int id)
+        public async Task<BrandEntity?> GetByIdAsync(int id)
         {
             return await _dbContext.Brands.AsNoTracking().FirstOrDefaultAsync(b => b.Id == id);
         }
 
-        public async Task<Brand?> UpdateAsync(int id, Brand brand)
+        public async Task<BrandEntity?> UpdateAsync(int id, BrandEntity brand)
         {
             var affectedRows = await _dbContext.Brands.Where(b => b.Id == id).ExecuteUpdateAsync(s => s
                 .SetProperty(b => b.Name, brand.Name));

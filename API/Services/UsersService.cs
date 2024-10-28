@@ -17,11 +17,11 @@ namespace API.Services
             _jwtProvider = jwtProvider;
         }
 
-        public async Task<User?> Register(string userName, string email,  string password)
+        public async Task<UserEntity?> Register(string userName, string email,  string password)
         {
             var hashedPassword = _passwordHasher.Generate(password);
 
-            var user = User.Create(userName, hashedPassword, email);
+            var user = UserEntity.Create(userName, hashedPassword, email);
 
             return await _usersRepo.CreateAsync(user);
         }

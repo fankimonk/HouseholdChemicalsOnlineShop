@@ -1,5 +1,10 @@
-﻿using API.Utils;
+﻿using API.Authorization;
+using API.Interfaces;
+using API.Services;
+using API.Utils;
+using DataAccess.Enums;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -10,6 +15,8 @@ namespace API.Extensions
     {
         public static void AddApiAuthentication(this IServiceCollection services, IConfiguration configuration)
         {
+            var jwtOptions = configuration.GetSection(nameof(JwtOptions)).Get<JwtOptions>();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
                 {
@@ -19,7 +26,7 @@ namespace API.Extensions
                         ValidateAudience = false,
                         ValidateLifetime = true,
                         ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JwtOptions:SecretKey"]))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions!.SecretKey))
                     };
                     
                     options.Events = new JwtBearerEvents
@@ -32,7 +39,21 @@ namespace API.Extensions
                     };
                 });
 
-            services.AddAuthorization();
+            services.AddScoped<IPermissionService, PermissionService>();
+            services.AddSingleton<IAuthorizationHandler, PermissionAuthorizationHandler>();
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("UserPolicy", policy =>
+                {
+                    policy.AddRequirements(new PermissionRequirement([Permissions.Read]));
+                });
+
+                options.AddPolicy("AdminPolicy", policy =>
+                {
+                    policy.AddRequirements(new PermissionRequirement([Permissions.Read, Permissions.Create, Permissions.Update, Permissions.Delete]));
+                });
+            });
         }
     }
 }

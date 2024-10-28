@@ -5,7 +5,7 @@ namespace DataAccess.Mappers
 {
     public static class ProductMapper
     {
-        public static ProductDTO ToDTO(this Product product)
+        public static ProductDTO ToDTO(this ProductEntity product)
         {
             return new ProductDTO
             {
@@ -20,9 +20,9 @@ namespace DataAccess.Mappers
             };
         }
 
-        public static Product ToProduct(this CreateProductRequest productDTO)
+        public static ProductEntity ToProduct(this CreateProductRequest productDTO)
         {
-            return new Product
+            return new ProductEntity
             {
                 Name = productDTO.Name,
                 Description = productDTO.Description,
@@ -34,9 +34,9 @@ namespace DataAccess.Mappers
             };
         }
 
-        public static Product ToProduct(this UpdateProductRequest productDTO)
+        public static ProductEntity ToProduct(this UpdateProductRequest productDTO)
         {
-            return new Product
+            return new ProductEntity
             {
                 Name = productDTO.Name,
                 Description = productDTO.Description,
