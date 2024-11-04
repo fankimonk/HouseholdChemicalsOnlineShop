@@ -1,12 +1,12 @@
-﻿using DataAccess.Models;
+﻿using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataAccess.Configurations
 {
-    public class CategoriesConfiguration : IEntityTypeConfiguration<CategoryEntity>
+    public class CategoriesConfiguration : IEntityTypeConfiguration<Category>
     {
-        public void Configure(EntityTypeBuilder<CategoryEntity> builder)
+        public void Configure(EntityTypeBuilder<Category> builder)
         {
             builder.HasKey(c => c.Id);
 

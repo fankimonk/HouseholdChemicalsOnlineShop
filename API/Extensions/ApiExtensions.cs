@@ -1,11 +1,9 @@
-﻿using API.Authorization;
-using API.Interfaces;
-using API.Services;
-using API.Utils;
-using DataAccess.Enums;
+﻿using Application.Interfaces;
+using Application.Services;
+using Application.Authorization;
+using Domain.Enums;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 

@@ -13,3 +13,6 @@ C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\refint\DataA
 C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\DataAccess.pdb
 C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache
 C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\bin\Debug\net8.0\Domain.dll
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\bin\Debug\net8.0\Domain.pdb
+C:\Dev\Web\HouseholdChemicalsOnlineShop\DataAccess\obj\Debug\net8.0\DataAccess.csproj.Up2Date

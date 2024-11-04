@@ -1,12 +1,13 @@
 using API.Extensions;
-using API.Interfaces;
-using API.Services;
-using API.Utils;
+using Application.Interfaces;
+using Application.Services;
+using Application.Utils;
 using DataAccess;
 using DataAccess.Interfaces;
 using DataAccess.Repositiories;
 using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.EntityFrameworkCore;
+using Application.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 

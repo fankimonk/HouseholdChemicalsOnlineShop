@@ -1,6 +1,7 @@
-﻿using DataAccess.DTOs.Category;
+﻿using API.Contracts.Category;
 using DataAccess.Interfaces;
-using DataAccess.Mappers;
+using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -17,39 +18,44 @@ namespace API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetAll()
         {
             var categories = await _categoriesRepo.GetAllAsync();
-            var categoryDTOs = categories.Select(c => c.ToDTO());
-            return Ok(categoryDTOs);
+            var categoriesResponse = categories.Select(c => new CategoryResponse(c.Id, c.Name));
+            return Ok(categoriesResponse);
         }
 
         [HttpGet("{id}")]
+        [Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var category = await _categoriesRepo.GetByIdAsync(id);
             if (category == null) return NotFound();
-            var categoryDTO = category.ToDTO();
-            return Ok(categoryDTO);
+            var categoryResponse = new CategoryResponse(category.Id, category.Name);
+            return Ok(categoryResponse);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateCategoryRequest categoryDTO)
+        [Authorize(Policy = "AdminPolicy")]
+        public async Task<IActionResult> Create([FromBody] CreateCategoryRequest categoryRequest)
         {
-            var category = await _categoriesRepo.CreateAsync(categoryDTO.ToCategory());
+            var category = await _categoriesRepo.CreateAsync(new Category { Name = categoryRequest.Name });
             if (category == null) return BadRequest(nameof(category));
-            return CreatedAtAction(nameof(Create), category.ToDTO());
+            return CreatedAtAction(nameof(Create), new CategoryResponse(category.Id, category.Name));
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateCategoryRequest categoryDTO)
+        [Authorize(Policy = "AdminPolicy")]
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateCategoryRequest categoryRequest)
         {
-            var category = await _categoriesRepo.UpdateAsync(id, categoryDTO.ToCategory());
+            var category = await _categoriesRepo.UpdateAsync(id, new Category { Name = categoryRequest.Name });
             if (category == null) return BadRequest(nameof(category));
-            return Ok(category.ToDTO());
+            return Ok(new CategoryResponse(category.Id, category.Name));
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             await _categoriesRepo.DeleteAsync(id);

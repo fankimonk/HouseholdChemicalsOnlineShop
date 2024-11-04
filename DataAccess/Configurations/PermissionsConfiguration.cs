@@ -1,19 +1,19 @@
-﻿using DataAccess.Enums;
-using DataAccess.Models;
+﻿using Domain.Enums;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataAccess.Configurations
 {
-    public class PermissionsConfiguration : IEntityTypeConfiguration<PermissionEntity>
+    public class PermissionsConfiguration : IEntityTypeConfiguration<Permission>
     {
-        public void Configure(EntityTypeBuilder<PermissionEntity> builder)
+        public void Configure(EntityTypeBuilder<Permission> builder)
         {
             builder.HasKey(p => p.Id);
 
             var permission = Enum
                 .GetValues<Permissions>()
-                .Select(p => new PermissionEntity
+                .Select(p => new Permission
                 {
                     Id = (int)p,
                     Name = p.ToString()

@@ -1,6 +1,6 @@
-﻿using DataAccess.Enums;
+﻿using Domain.Enums;
 using DataAccess.Interfaces;
-using DataAccess.Models;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Repositiories
@@ -14,20 +14,12 @@ namespace DataAccess.Repositiories
             _dbContext = dbContext;
         }
 
-        public async Task<UserEntity?> CreateAsync(UserEntity user)
+        public async Task<User?> CreateAsync(User user)
         {
-            if (user == null) return null;
-
-            //var roleEntity = await _dbContext.Roles
-            //    .SingleOrDefaultAsync(r => r.Id == (int)Roles.Admin)
-            //    ?? throw new InvalidOperationException();
-
-            //var newUser = UserEntity.Create(user.UserName, user.PasswordHash, user.Email);
-            //newUser.Roles = [roleEntity];
-
-            await _dbContext.Users.AddAsync(user);
+            var createdUser = await _dbContext.Users.AddAsync(user);
+            if (createdUser == null) return null;
             await _dbContext.SaveChangesAsync();
-            return user;
+            return createdUser.Entity;
         }
 
         public async Task DeleteAsync(int id)
@@ -35,39 +27,50 @@ namespace DataAccess.Repositiories
             throw new NotImplementedException();
         }
 
-        public async Task<List<UserEntity>> GetAllAsync()
+        public async Task<List<User>> GetAllAsync()
         {
             throw new NotImplementedException();
         }
 
-        public async Task<UserEntity?> GetByEmailAsync(string email)
+        public async Task<User?> GetByEmailAsync(string email)
         {
             return await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Email == email);
         }
 
-        public async Task<UserEntity?> GetByIdAsync(int id)
+        public async Task<User?> GetByIdAsync(int id)
         {
             throw new NotImplementedException();
         }
 
         public async Task<HashSet<Permissions>> GetUserPermissions(int id)
         {
-            var roles = await _dbContext.Users
-                .AsNoTracking()
-                .Include(u => u.Roles)
-                .ThenInclude(r => r.Permissions)
-                .Where(u => u.Id == id)
-                .Select(u => u.Roles)
-                .ToArrayAsync();
+            //var user = await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
+            //if (user == null) return [];
 
-            return roles
-                .SelectMany(r => r)
-                .SelectMany(r => r.Permissions)
-                .Select(p => (Permissions)p.Id)
-                .ToHashSet();
+            //var role = user.Role;
+            //if (role == null) return [];
+
+            var user = await _dbContext.Users.AsNoTracking().Include(u => u.Role).ThenInclude(r => r!.Permissions).FirstOrDefaultAsync(u => u.Id == id);
+            if (user == null) return [];
+
+            return user.Role!.Permissions.Select(p => (Permissions)p.Id).ToHashSet();
+
+            //var roles = await _dbContext.Users
+            //    .AsNoTracking()
+            //    .Include(u => u.Roles)
+            //    .ThenInclude(r => r.Permissions)
+            //    .Where(u => u.Id == id)
+            //    .Select(u => u.Roles)
+            //    .ToArrayAsync();
+
+            //return roles
+            //    .SelectMany(r => r)
+            //    .SelectMany(r => r.Permissions)
+            //    .Select(p => (Permissions)p.Id)
+            //    .ToHashSet();
         }
 
-        public async Task<UserEntity?> UpdateAsync(int id, UserEntity user)
+        public async Task<User?> UpdateAsync(int id, User user)
         {
             throw new NotImplementedException();
         }

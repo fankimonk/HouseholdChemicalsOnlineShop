@@ -1,12 +1,12 @@
-﻿using DataAccess.Models;
+﻿using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataAccess.Configurations
 {
-    public class BrandsConfiguration : IEntityTypeConfiguration<BrandEntity>
+    public class BrandsConfiguration : IEntityTypeConfiguration<Brand>
     {
-        public void Configure(EntityTypeBuilder<BrandEntity> builder)
+        public void Configure(EntityTypeBuilder<Brand> builder)
         {
             builder.HasKey(b => b.Id);
 

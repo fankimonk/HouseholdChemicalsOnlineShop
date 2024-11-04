@@ -1,26 +1,26 @@
-﻿using DataAccess.Enums;
-using DataAccess.Models;
+﻿using Domain.Enums;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataAccess.Configurations
 {
-    public class RolesConfiguration : IEntityTypeConfiguration<RoleEntity>
+    public class RolesConfiguration : IEntityTypeConfiguration<Role>
     {
-        public void Configure(EntityTypeBuilder<RoleEntity> builder)
+        public void Configure(EntityTypeBuilder<Role> builder)
         {
             builder.HasKey(r => r.Id);
 
             builder
                 .HasMany(r => r.Permissions)
                 .WithMany(p => p.Roles)
-                .UsingEntity<RolePermissionEntity>(
-                    l => l.HasOne<PermissionEntity>().WithMany().HasForeignKey(p => p.PermissionId),
-                    r => r.HasOne<RoleEntity>().WithMany().HasForeignKey(r => r.RoleId));
+                .UsingEntity<RolePermission>(
+                    l => l.HasOne<Permission>().WithMany().HasForeignKey(p => p.PermissionId),
+                    r => r.HasOne<Role>().WithMany().HasForeignKey(r => r.RoleId));
 
             var roles = Enum
                 .GetValues<Roles>()
-                .Select(r => new RoleEntity
+                .Select(r => new Role
                 {
                     Id = (int)r,
                     Name = r.ToString()

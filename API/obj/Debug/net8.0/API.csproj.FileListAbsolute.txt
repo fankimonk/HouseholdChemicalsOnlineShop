@@ -145,3 +145,9 @@ C:\Dev\Web\HouseholdChemicalsOnlineShop\API\obj\Debug\net8.0\API.genruntimeconfi
 C:\Dev\Web\HouseholdChemicalsOnlineShop\API\obj\Debug\net8.0\ref\API.dll
 C:\Dev\Web\HouseholdChemicalsOnlineShop\API\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Dev\Web\HouseholdChemicalsOnlineShop\API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Dev\Web\HouseholdChemicalsOnlineShop\API\bin\Debug\net8.0\Domain.dll
+C:\Dev\Web\HouseholdChemicalsOnlineShop\API\bin\Debug\net8.0\Domain.pdb
+C:\Dev\Web\HouseholdChemicalsOnlineShop\API\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Dev\Web\HouseholdChemicalsOnlineShop\API\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Dev\Web\HouseholdChemicalsOnlineShop\API\bin\Debug\net8.0\Application.dll
+C:\Dev\Web\HouseholdChemicalsOnlineShop\API\bin\Debug\net8.0\Application.pdb

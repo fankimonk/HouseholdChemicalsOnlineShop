@@ -2,10 +2,10 @@
 {
     public class AuthorizationOptions
     {
-        public RolePermissions[] RolePermissions { get; set; } = [];
+        public RolesPermissions[] RolePermissions { get; set; } = [];
     }
 
-    public class RolePermissions
+    public class RolesPermissions
     {
         public string Role { get; set; } = string.Empty;
 

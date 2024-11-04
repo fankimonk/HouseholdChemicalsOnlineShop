@@ -21,7 +21,7 @@ namespace DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("DataAccess.Models.BrandEntity", b =>
+            modelBuilder.Entity("Domain.Models.Brand", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,7 +38,7 @@ namespace DataAccess.Migrations
                     b.ToTable("Brands");
                 });
 
-            modelBuilder.Entity("DataAccess.Models.CategoryEntity", b =>
+            modelBuilder.Entity("Domain.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -55,7 +55,7 @@ namespace DataAccess.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("DataAccess.Models.PermissionEntity", b =>
+            modelBuilder.Entity("Domain.Models.Permission", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -94,7 +94,7 @@ namespace DataAccess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("DataAccess.Models.ProductEntity", b =>
+            modelBuilder.Entity("Domain.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -109,9 +109,11 @@ namespace DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImageURL")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
@@ -133,7 +135,7 @@ namespace DataAccess.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("DataAccess.Models.RoleEntity", b =>
+            modelBuilder.Entity("Domain.Models.Role", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -162,7 +164,7 @@ namespace DataAccess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("DataAccess.Models.RolePermissionEntity", b =>
+            modelBuilder.Entity("Domain.Models.RolePermission", b =>
                 {
                     b.Property<int>("RoleId")
                         .HasColumnType("int");
@@ -204,7 +206,7 @@ namespace DataAccess.Migrations
                         });
                 });
 
-            modelBuilder.Entity("DataAccess.Models.UserEntity", b =>
+            modelBuilder.Entity("Domain.Models.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -220,39 +222,29 @@ namespace DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("RoleId");
+
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("DataAccess.Models.UserRoleEntity", b =>
+            modelBuilder.Entity("Domain.Models.Product", b =>
                 {
-                    b.Property<int>("RoleId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("RoleId", "UserId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserRoles");
-                });
-
-            modelBuilder.Entity("DataAccess.Models.ProductEntity", b =>
-                {
-                    b.HasOne("DataAccess.Models.BrandEntity", "Brand")
+                    b.HasOne("Domain.Models.Brand", "Brand")
                         .WithMany("Products")
                         .HasForeignKey("BrandId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DataAccess.Models.CategoryEntity", "Category")
+                    b.HasOne("Domain.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -263,44 +255,45 @@ namespace DataAccess.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("DataAccess.Models.RolePermissionEntity", b =>
+            modelBuilder.Entity("Domain.Models.RolePermission", b =>
                 {
-                    b.HasOne("DataAccess.Models.PermissionEntity", null)
+                    b.HasOne("Domain.Models.Permission", null)
                         .WithMany()
                         .HasForeignKey("PermissionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DataAccess.Models.RoleEntity", null)
+                    b.HasOne("Domain.Models.Role", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("DataAccess.Models.UserRoleEntity", b =>
+            modelBuilder.Entity("Domain.Models.User", b =>
                 {
-                    b.HasOne("DataAccess.Models.RoleEntity", null)
-                        .WithMany()
+                    b.HasOne("Domain.Models.Role", "Role")
+                        .WithMany("Users")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DataAccess.Models.UserEntity", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("DataAccess.Models.BrandEntity", b =>
+            modelBuilder.Entity("Domain.Models.Brand", b =>
                 {
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("DataAccess.Models.CategoryEntity", b =>
+            modelBuilder.Entity("Domain.Models.Category", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("Domain.Models.Role", b =>
+                {
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,5 +1,5 @@
 ﻿using DataAccess.Interfaces;
-using DataAccess.Models;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Repositiories
@@ -13,12 +13,12 @@ namespace DataAccess.Repositiories
             _dbContext = dbContext;
         }
 
-        public async Task<ProductEntity?> CreateAsync(ProductEntity product)
+        public async Task<Product?> CreateAsync(Product product)
         {
-            if (product == null) return null;
-            await _dbContext.Products.AddAsync(product);
+            var createdProduct = await _dbContext.Products.AddAsync(product);
+            if (createdProduct == null) return null;
             await _dbContext.SaveChangesAsync();
-            return product;
+            return createdProduct.Entity;
         }
 
         public async Task DeleteAsync(int id)
@@ -27,30 +27,30 @@ namespace DataAccess.Repositiories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<ProductEntity>> GetAllAsync()
+        public async Task<List<Product>> GetAllAsync()
         {
             return await _dbContext.Products.AsNoTracking().ToListAsync();
         }
 
-        public async Task<ProductEntity?> GetByIdAsync(int id)
+        public async Task<Product?> GetByIdAsync(int id)
         {
             return await _dbContext.Products.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task<ProductEntity?> UpdateAsync(int id, ProductEntity product)
+        public async Task<Product?> UpdateAsync(int id, Product product)
         {
-            var affectedRows = await _dbContext.Products.Where(p => p.Id == id).ExecuteUpdateAsync(s => s
-                .SetProperty(p => p.Name, product.Name)
-                .SetProperty(p => p.Description, product.Description)
-                .SetProperty(p => p.ImageURL, product.ImageURL)
-                .SetProperty(p => p.Price, product.Price)
-                .SetProperty(p => p.StockQuantity, product.StockQuantity)
-                .SetProperty(p => p.CategoryId, product.CategoryId)
-                .SetProperty(p => p.BrandId, product.BrandId));
-            if (affectedRows == 0)
-                return null;
+            var updatedProduct = await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
+            if (updatedProduct == null) return null;
+
+            updatedProduct.Name = product.Name;
+            updatedProduct.Description = product.Description;
+            updatedProduct.ImageURL = product.ImageURL;
+            updatedProduct.Price = product.Price;
+            updatedProduct.StockQuantity = product.StockQuantity;
+            updatedProduct.CategoryId = product.CategoryId;
+            updatedProduct.BrandId = product.BrandId;
             await _dbContext.SaveChangesAsync();
-            return product;
+            return updatedProduct;
         }
     }
 }

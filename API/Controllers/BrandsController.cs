@@ -1,6 +1,7 @@
-﻿using DataAccess.DTOs.Brand;
+﻿using API.Contracts.Brand;
 using DataAccess.Interfaces;
-using DataAccess.Mappers;
+using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -17,39 +18,44 @@ namespace API.Controllers
         }
 
         [HttpGet]
+        [Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetAll()
         {
             var brands = await _brandsRepo.GetAllAsync();
-            var brandDTOs = brands.Select(b => b.ToDTO());
-            return Ok(brandDTOs);
+            var brandsResponse = brands.Select(b => new BrandResponse(b.Id, b.Name));
+            return Ok(brandsResponse);
         }
 
         [HttpGet("{id}")]
+        [Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var brand = await _brandsRepo.GetByIdAsync(id);
             if (brand == null) return NotFound();
-            var brandDTO = brand.ToDTO();
-            return Ok(brandDTO);
+            var brandResponse = new BrandResponse(brand.Id, brand.Name);
+            return Ok(brandResponse);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreateBrandRequest brandDTO)
+        [Authorize(Policy = "AdminPolicy")]
+        public async Task<IActionResult> Create([FromBody] CreateBrandRequest brandRequest)
         {
-            var brand = await _brandsRepo.CreateAsync(brandDTO.ToBrand());
+            var brand = await _brandsRepo.CreateAsync(new Brand { Name = brandRequest.Name });
             if (brand == null) return BadRequest(nameof(brand));
-            return CreatedAtAction(nameof(Create), brand.ToDTO());
+            return CreatedAtAction(nameof(Create), new BrandResponse(brand.Id, brand.Name));
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateBrandRequest brandDTO)
+        [Authorize(Policy = "AdminPolicy")]
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateBrandRequest brandRequest)
         {
-            var brand = await _brandsRepo.UpdateAsync(id, brandDTO.ToBrand());
+            var brand = await _brandsRepo.UpdateAsync(id, new Brand { Name = brandRequest.Name });
             if (brand == null) return BadRequest(nameof(brand));
-            return Ok(brand.ToDTO());
+            return Ok(new BrandResponse(brand.Id, brand.Name));
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
             await _brandsRepo.DeleteAsync(id);

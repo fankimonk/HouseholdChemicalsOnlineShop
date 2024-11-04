@@ -1,5 +1,5 @@
 ﻿using DataAccess.Interfaces;
-using DataAccess.Models;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Repositiories
@@ -13,12 +13,12 @@ namespace DataAccess.Repositiories
             _dbContext = dbContext;
         }
 
-        public async Task<BrandEntity?> CreateAsync(BrandEntity brand)
+        public async Task<Brand?> CreateAsync(Brand brand)
         {
-            if (brand == null) return null;
-            await _dbContext.Brands.AddAsync(brand);
+            var createdBrand = await _dbContext.Brands.AddAsync(brand);
+            if (createdBrand == null) return null;
             await _dbContext.SaveChangesAsync();
-            return brand;
+            return createdBrand.Entity;
         }
 
         public async Task DeleteAsync(int id)
@@ -27,24 +27,24 @@ namespace DataAccess.Repositiories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<BrandEntity>> GetAllAsync()
+        public async Task<List<Brand>> GetAllAsync()
         {
             return await _dbContext.Brands.AsNoTracking().ToListAsync();
         }
 
-        public async Task<BrandEntity?> GetByIdAsync(int id)
+        public async Task<Brand?> GetByIdAsync(int id)
         {
             return await _dbContext.Brands.AsNoTracking().FirstOrDefaultAsync(b => b.Id == id);
         }
 
-        public async Task<BrandEntity?> UpdateAsync(int id, BrandEntity brand)
+        public async Task<Brand?> UpdateAsync(int id, Brand brand)
         {
-            var affectedRows = await _dbContext.Brands.Where(b => b.Id == id).ExecuteUpdateAsync(s => s
-                .SetProperty(b => b.Name, brand.Name));
-            if (affectedRows == 0)
-                return null;
+            var updatedBrand = await _dbContext.Brands.FirstOrDefaultAsync(b => b.Id == id);
+            if (updatedBrand == null) return null;
+
+            updatedBrand.Name = brand.Name;
             await _dbContext.SaveChangesAsync();
-            return brand;
+            return updatedBrand;
         }
     }
 }

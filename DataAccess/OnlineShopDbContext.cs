@@ -1,5 +1,5 @@
 ﻿using DataAccess.Configurations;
-using DataAccess.Models;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -7,14 +7,13 @@ namespace DataAccess
 {
     public class OnlineShopDbContext(DbContextOptions options, IOptions<AuthorizationOptions> authOptions) : DbContext(options)
     {
-        public DbSet<ProductEntity> Products { get; set; }
-        public DbSet<CategoryEntity> Categories { get; set; }
-        public DbSet<BrandEntity> Brands { get; set; }
-        public DbSet<UserEntity> Users { get; set; }
-        public DbSet<RoleEntity> Roles { get; set; }
-        public DbSet<PermissionEntity> Permissions { get; set; }
-        public DbSet<UserRoleEntity> UserRoles { get; set; }
-        public DbSet<RolePermissionEntity> RolePermissions { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Permission> Permissions { get; set; }
+        public DbSet<RolePermission> RolePermissions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

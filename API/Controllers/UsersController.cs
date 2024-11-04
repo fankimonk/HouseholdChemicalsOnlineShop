@@ -1,7 +1,7 @@
-﻿using API.Services;
+﻿using Application.Services;
 using DataAccess.Interfaces;
-using DataAccess.Models.DTOs.User;
 using Microsoft.AspNetCore.Mvc;
+using API.Contracts.User;
 
 namespace API.Controllers
 {
@@ -24,7 +24,7 @@ namespace API.Controllers
         {
             var user = await _usersService.Register(request.UserName, request.Email, request.Password);
             if (user == null) return BadRequest();
-            return Ok(user);
+            return Ok(new UserResponse(user.UserName, user.Email, user.RoleId));
         }
 
         [HttpPost]

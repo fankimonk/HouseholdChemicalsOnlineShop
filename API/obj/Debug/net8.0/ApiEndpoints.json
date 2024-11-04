@@ -18,8 +18,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "brandDTO",
-        "Type": "DataAccess.DTOs.Brand.CreateBrandRequest",
+        "Name": "brandRequest",
+        "Type": "API.Contracts.Brand.CreateBrandRequest",
         "IsRequired": true
       }
     ],
@@ -55,8 +55,8 @@
         "IsRequired": true
       },
       {
-        "Name": "brandDTO",
-        "Type": "DataAccess.DTOs.Brand.UpdateBrandRequest",
+        "Name": "brandRequest",
+        "Type": "API.Contracts.Brand.UpdateBrandRequest",
         "IsRequired": true
       }
     ],
@@ -97,8 +97,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "categoryDTO",
-        "Type": "DataAccess.DTOs.Category.CreateCategoryRequest",
+        "Name": "categoryRequest",
+        "Type": "API.Contracts.Category.CreateCategoryRequest",
         "IsRequired": true
       }
     ],
@@ -134,8 +134,8 @@
         "IsRequired": true
       },
       {
-        "Name": "categoryDTO",
-        "Type": "DataAccess.DTOs.Category.UpdateCategoryRequest",
+        "Name": "categoryRequest",
+        "Type": "API.Contracts.Category.UpdateCategoryRequest",
         "IsRequired": true
       }
     ],
@@ -176,8 +176,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "productDTO",
-        "Type": "DataAccess.Models.DTOs.Product.CreateProductRequest",
+        "Name": "productRequest",
+        "Type": "API.Contracts.Product.CreateProductRequest",
         "IsRequired": true
       }
     ],
@@ -213,8 +213,8 @@
         "IsRequired": true
       },
       {
-        "Name": "productDTO",
-        "Type": "DataAccess.Models.DTOs.Product.UpdateProductRequest",
+        "Name": "productRequest",
+        "Type": "API.Contracts.Product.UpdateProductRequest",
         "IsRequired": true
       }
     ],
@@ -246,7 +246,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "DataAccess.Models.DTOs.User.LoginUserRequest",
+        "Type": "API.Contracts.User.LoginUserRequest",
         "IsRequired": true
       }
     ],
@@ -262,7 +262,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "DataAccess.Models.DTOs.User.RegisterUserRequest",
+        "Type": "API.Contracts.User.RegisterUserRequest",
         "IsRequired": true
       }
     ],

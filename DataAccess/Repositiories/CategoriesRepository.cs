@@ -1,5 +1,5 @@
 ﻿using DataAccess.Interfaces;
-using DataAccess.Models;
+using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Repositiories
@@ -13,12 +13,12 @@ namespace DataAccess.Repositiories
             _dbContext = dbContext;
         }
 
-        public async Task<CategoryEntity?> CreateAsync(CategoryEntity category)
+        public async Task<Category?> CreateAsync(Category category)
         {
-            if (category == null) return null;
-            await _dbContext.Categories.AddAsync(category);
+            var createdCategory = await _dbContext.Categories.AddAsync(category);
+            if (createdCategory == null) return null;
             await _dbContext.SaveChangesAsync();
-            return category;
+            return createdCategory.Entity;
         }
 
         public async Task DeleteAsync(int id)
@@ -27,24 +27,24 @@ namespace DataAccess.Repositiories
             await _dbContext.SaveChangesAsync();
         }
 
-        public async Task<List<CategoryEntity>> GetAllAsync()
+        public async Task<List<Category>> GetAllAsync()
         {
             return await _dbContext.Categories.AsNoTracking().ToListAsync();
         }
 
-        public async Task<CategoryEntity?> GetByIdAsync(int id)
+        public async Task<Category?> GetByIdAsync(int id)
         {
             return await _dbContext.Categories.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        public async Task<CategoryEntity?> UpdateAsync(int id, CategoryEntity category)
+        public async Task<Category?> UpdateAsync(int id, Category category)
         {
-            var affectedRows = await _dbContext.Categories.Where(c => c.Id == id).ExecuteUpdateAsync(s => s
-                .SetProperty(c => c.Name, category.Name));
-            if (affectedRows == 0)
-                return null;
+            var updatedCategory = await _dbContext.Categories.FirstOrDefaultAsync(c => c.Id == id);
+            if (updatedCategory == null) return null;
+
+            updatedCategory.Name = category.Name;
             await _dbContext.SaveChangesAsync();
-            return category;
+            return updatedCategory;
         }
     }
 }

@@ -1,21 +1,19 @@
-﻿using DataAccess.Models;
+﻿using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataAccess.Configurations
 {
-    public class UsersConfiguration : IEntityTypeConfiguration<UserEntity>
+    public class UsersConfiguration : IEntityTypeConfiguration<User>
     {
-        public void Configure(EntityTypeBuilder<UserEntity> builder)
+        public void Configure(EntityTypeBuilder<User> builder)
         {
             builder.HasKey(u => u.Id);
 
             builder
-                .HasMany(u => u.Roles)
+                .HasOne(u => u.Role)
                 .WithMany(r => r.Users)
-                .UsingEntity<UserRoleEntity>(
-                    l => l.HasOne<RoleEntity>().WithMany().HasForeignKey(r => r.RoleId),
-                    r => r.HasOne<UserEntity>().WithMany().HasForeignKey(u => u.UserId));
+                .HasForeignKey(u => u.RoleId);
         }
     }
 }
