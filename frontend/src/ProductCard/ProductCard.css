@@ -1,0 +1,82 @@
+/* Карточка продукта */
+.product-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1), -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-bottom: 20px;
+    max-width: 100%;
+    /* Для адаптивности */
+    box-sizing: border-box;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Более глубокие тени */
+}
+
+/* Картинка продукта */
+.product-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Информация о продукте */
+.product-info {
+    flex: 1;
+    margin-left: 16px;
+}
+
+/* Название продукта */
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 8px;
+    color: #333;
+}
+
+/* Описание продукта */
+.product-description {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+/* Блок с ценой и кнопкой */
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 100px;
+    /* Чтобы блок не сжимался */
+}
+
+/* Цена продукта */
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+/* Кнопка "В корзину" */
+.add-to-cart-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+    background-color: #0056b3;
+}

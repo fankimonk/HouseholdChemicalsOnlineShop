@@ -1,0 +1,39 @@
+/* Общие стили для панели фильтрации */
+.filter-panel {
+    position: fixed;
+    top: 60px;
+    /* Отступ под header */
+    left: 0;
+    width: 20%;
+    height: calc(100% - 60px);
+    /* Высота экрана за вычетом header */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1), -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow-y: auto;
+    /* Скролл, если содержимое больше высоты */
+    box-sizing: border-box;
+}
+
+/* Секция фильтра */
+.filter-section {
+    margin-bottom: 20px;
+}
+
+/* Заголовок секции */
+.filter-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Чекбоксы */
+.filter-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.filter-section label input {
+    margin-right: 10px;
+}
