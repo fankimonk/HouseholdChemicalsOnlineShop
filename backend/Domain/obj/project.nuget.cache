@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8Zh3EOx4vm0=",
+  "dgSpecHash": "4yC6ahRq1uU=",
   "success": true,
-  "projectFilePath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

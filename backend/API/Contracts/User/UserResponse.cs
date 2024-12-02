@@ -3,6 +3,6 @@
     public record UserResponse(
         string UserName,
         string Email,
-        int RoleId
+        string Role
         );
 }

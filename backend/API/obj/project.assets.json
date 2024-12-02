@@ -4315,11 +4315,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\API\\API.csproj",
+      "projectUniqueName": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\API\\API.csproj",
+      "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\API.csproj",
       "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\API\\obj\\",
+      "outputPath": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4337,14 +4337,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Application\\Application.csproj": {
-              "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Application\\Application.csproj"
+            "C:\\Dev\\Web\\OnlineShop\\backend\\Application\\Application.csproj": {
+              "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\Application\\Application.csproj"
             },
-            "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\DataAccess\\DataAccess.csproj"
+            "C:\\Dev\\Web\\OnlineShop\\backend\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj"
+            "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj"
             }
           }
         }

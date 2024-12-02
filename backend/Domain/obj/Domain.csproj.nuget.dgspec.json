@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj": {}
+    "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj": {
+    "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\obj\\",
+        "outputPath": "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",

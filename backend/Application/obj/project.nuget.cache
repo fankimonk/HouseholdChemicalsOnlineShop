@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XLSUT8fTN2k=",
+  "dgSpecHash": "HIzJTc8+n+8=",
   "success": true,
-  "projectFilePath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Dev\\Web\\OnlineShop\\backend\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kiril\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\kiril\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

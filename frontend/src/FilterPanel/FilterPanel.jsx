@@ -1,8 +1,39 @@
 import "./FilterPanel.css";
-import CategoryCheckbox from "../CategoryCheckbox/CategoryCheckbox";
-import BrandCheckbox from "../BrandCheckbox/BrandCheckbox";
+import CategoryCheckbox from "./CategoryCheckbox";
+import { useState, useEffect } from 'react'
+import { getAllCategories } from '../Services/Categories'
+import { getAllBrands } from '../Services/Brands'
+import BrandCheckbox from "./BrandCheckbox";
 
-const FilterPanel = ({ categories, brands }) => {
+const FilterPanel = ({ onCategoryChange, onBrandChange }) => {
+    const [categories, setCategories] = useState([]);
+    const [categoriesLoading, setCategoriesLoading] = useState(true);
+
+    const [brands, setBrands] = useState([]);
+    const [brandsLoading, setBrandsLoading] = useState(true);
+
+    useEffect(() => {
+        const getCategories = async () => {
+            setCategoriesLoading(true);
+            const response = await getAllCategories();
+            setCategories(response);
+            setCategoriesLoading(false);
+        }
+
+        getCategories();
+    }, []);
+
+    useEffect(() => {
+        const getBrands = async () => {
+            setBrandsLoading(true);
+            const response = await getAllBrands();
+            setBrands(response);
+            setBrandsLoading(false);
+        }
+
+        getBrands();
+    }, []);
+
     return (
         <aside className="filter-panel">
             <div className="filter-section">
@@ -11,6 +42,7 @@ const FilterPanel = ({ categories, brands }) => {
                     <CategoryCheckbox
                         key={category.id}
                         category={category}
+                        onCategoryChange={onCategoryChange}
                     />
                 ))}
             </div>
@@ -19,7 +51,9 @@ const FilterPanel = ({ categories, brands }) => {
                 {brands.map((brand) => (
                     <BrandCheckbox
                         key={brand.id}
-                        brand={brand} />
+                        brand={brand}
+                        onBrandChange={onBrandChange}
+                    />
                 ))}
             </div>
         </aside>

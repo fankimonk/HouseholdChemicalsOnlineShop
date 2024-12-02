@@ -3,67 +3,91 @@ import FilterPanel from './FilterPanel/FilterPanel'
 import Header from './Header/Header'
 import ProductCardContainer from './ProductCardContainer/ProductCardContainer'
 import { useState, useEffect } from 'react'
-import { getAllProducts } from './Services/Products'
-import { getAllCategories } from './Services/Categories'
-import { getAllBrands } from './Services/Brands'
+import AuthPanel from './AuthPanel/AuthPanel'
+import { authCheck, logout } from './Services/Auth'
 
 function App() {
-  const [products, setProducts] = useState([]);
-  const [productsLoading, setProductsLoading] = useState(true);
+  const [selectedCategories, setSelectedCategories] = useState([]);
 
-  const [categories, setCategories] = useState([]);
-  const [categoriesLoading, setCategoriesLoading] = useState(true);
-
-  const [brands, setBrands] = useState([]);
-  const [brandsLoading, setBrandsLoading] = useState(true);
-
-  useEffect(() => {
-    const getProducts = async () => {
-      const response = await getAllProducts();
-      setProducts(response);
-      setProductsLoading(false);
+  const onCategoryChange = (categoryId, isChecked) => {
+    const index = selectedCategories.indexOf(categoryId);
+    if (!isChecked) {
+      if (index !== -1)
+        selectedCategories.splice(index, 1);
+    }
+    else {
+      if (index === -1)
+        selectedCategories.push(categoryId);
     }
 
-    getProducts();
-  }, []);
+    setSelectedCategories(selectedCategories);
+    console.log(selectedCategories);
+  };
 
-  useEffect(() => {
-    const getCategories = async () => {
-      const response = await getAllCategories();
-      setCategories(response);
-      setCategoriesLoading(false);
+  const [selectedBrands, setSelectedBrands] = useState([]);
+
+  const onBrandChange = (brandId, isChecked) => {
+    const index = selectedBrands.indexOf(brandId);
+    if (!isChecked) {
+      if (index !== -1)
+        selectedBrands.splice(index, 1);
+    }
+    else {
+      if (index === -1)
+        selectedBrands.push(brandId);
     }
 
-    getCategories();
-  }, []);
+    setSelectedBrands(selectedBrands);
+    console.log(selectedBrands);
+  };
+
+  const [isAuthPanelOpen, setIsAuthPanelOpen] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
+
+  const openLoginPanel = () => {
+    setIsAuthPanelOpen(true);
+    setIsLogin(true);
+  };
+
+  const openRegisterPanel = () => {
+    setIsAuthPanelOpen(true);
+    setIsLogin(false);
+  };
+
+  const closeAuthPanel = () => {
+    setIsAuthPanelOpen(false);
+  };
+
+  const [user, setUser] = useState(null);
+
+  const checkAuth = async () => {
+    const userResponse = await authCheck();
+    setUser(userResponse);
+  };
 
   useEffect(() => {
-    const getBrands = async () => {
-      const response = await getAllBrands();
-      setBrands(response);
-      setBrandsLoading(false);
-    }
-
-    getBrands();
+    checkAuth();
   }, []);
+
+  const onLogout = async () => {
+    await logout();
+    checkAuth();
+  };
 
   return (
     <>
-      <Header />
-      <div>
-        {categoriesLoading || brandsLoading ? (
-          <p style={{ marginTop: "60px" }}>Загрузка...</p>
-        ) : (
-          < FilterPanel categories={categories} brands={brands} />
-        )}
-      </div>
-      <div>
-        {productsLoading ? (
-          <p style={{ marginLeft: "20%", padding: "20px" }}>Загрузка...</p>
-        ) : (
-          <ProductCardContainer products={products} />
-        )}
-      </div>
+      <Header
+        user={user}
+        onLogout={onLogout}
+        onLoginClick={openLoginPanel}
+        onRegisterClick={openRegisterPanel}
+      />
+      {isAuthPanelOpen && (<AuthPanel isLogin={isLogin} onClose={closeAuthPanel} />)}
+      < FilterPanel
+        onCategoryChange={onCategoryChange}
+        onBrandChange={onBrandChange}
+      />
+      <ProductCardContainer user={user} />
     </>
   )
 }

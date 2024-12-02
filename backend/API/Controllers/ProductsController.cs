@@ -10,18 +10,18 @@ namespace API.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly IProductsRepository _productsRepo;
+        private readonly IProductsRepository _productsRepository;
 
         public ProductsController(IProductsRepository productsRepo)
         {
-            _productsRepo = productsRepo;
+            _productsRepository = productsRepo;
         }
 
         [HttpGet]
         //[Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetAll()
         {
-            var products = await _productsRepo.GetAllAsync();
+            var products = await _productsRepository.GetAllAsync();
             var productsResponse = products.Select(p => new ProductResponse(p.Id, p.Name, p.Description, p.ImagePath, p.Price, p.StockQuantity, p.CategoryId, p.BrandId));
             return Ok(productsResponse);
         }
@@ -30,7 +30,7 @@ namespace API.Controllers
         //[Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
-            var product = await _productsRepo.GetByIdAsync(id);
+            var product = await _productsRepository.GetByIdAsync(id);
             if (product == null) return NotFound();
             var productResponse = new ProductResponse(
                 product.Id, product.Name, product.Description, product.ImagePath, 
@@ -42,7 +42,7 @@ namespace API.Controllers
         [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Create([FromBody] CreateProductRequest productRequest)
         {
-            var product = await _productsRepo.CreateAsync(new Product { 
+            var product = await _productsRepository.CreateAsync(new Product { 
                 Name = productRequest.Name,
                 Description = productRequest.Description,
                 ImagePath = productRequest.ImagePath,
@@ -61,7 +61,7 @@ namespace API.Controllers
         [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateProductRequest productRequest)
         {
-            var product = await _productsRepo.UpdateAsync(id, new Product
+            var product = await _productsRepository.UpdateAsync(id, new Product
             {
                 Name = productRequest.Name,
                 Description = productRequest.Description,
@@ -81,7 +81,7 @@ namespace API.Controllers
         [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {
-            await _productsRepo.DeleteAsync(id);
+            await _productsRepository.DeleteAsync(id);
             return NoContent();
         }
 

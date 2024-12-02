@@ -1,23 +1,30 @@
 import "./Header.css";
+import LoginButton from "./LoginButton/LoginButton"
+import RegisterButton from "./RegisterButton/RegisterButton";
 
-const Header = () => {
+const Header = ({ user, onLogout, onLoginClick, onRegisterClick }) => {
     return (
         <header className="header">
             <div className="left-section">
-                <button className="button">Главная</button>
-            </div>
-            <div className="center-section">
                 <input
                     type="text"
                     placeholder="Поиск..."
                     className="search-input"
                 />
-                <button className="search-button">Поиск</button>
+                <button className="button">Поиск</button>
             </div>
-            <div className="right-section">
-                <button className="button">Вход</button>
-                <button className="button">Регистрация</button>
-            </div>
+            {user ? (
+                <div className="right-section">
+                    <p className="username">{user.userName}</p>
+                    <button className="button">Корзина</button>
+                    <button className="button" onClick={onLogout}>Выйти</button>
+                </div>
+            ) : (
+                <div className="right-section">
+                    <LoginButton onClick={onLoginClick} />
+                    <RegisterButton onClick={onRegisterClick} />
+                </div>
+            )}
         </header>
     );
 };

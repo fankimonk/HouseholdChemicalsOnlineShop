@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProductCard.css";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, user }) => {
     const {
         id,
         name,
@@ -20,7 +20,12 @@ const ProductCard = ({ product }) => {
             </div>
             <div className="product-actions">
                 <p className="product-price">{price} ₽</p>
-                <button className="add-to-cart-button">В корзину</button>
+                {user ? (
+                    <button className="add-to-cart-button">В корзину</button>
+                ) : (
+                    <button className="add-to-cart-button-unauth">Вы не вошли в аккаунт</button>
+                )}
+
             </div>
         </div>
     );

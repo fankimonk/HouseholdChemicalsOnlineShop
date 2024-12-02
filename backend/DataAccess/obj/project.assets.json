@@ -4061,11 +4061,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Dev\\Web\\OnlineShop\\backend\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\DataAccess\\DataAccess.csproj",
+      "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\DataAccess\\DataAccess.csproj",
       "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\DataAccess\\obj\\",
+      "outputPath": "C:\\Dev\\Web\\OnlineShop\\backend\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4083,8 +4083,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj"
+            "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj"
             }
           }
         }

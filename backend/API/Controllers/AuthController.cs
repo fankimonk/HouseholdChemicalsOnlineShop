@@ -3,17 +3,18 @@ using DataAccess.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using API.Contracts.User;
 using Microsoft.AspNetCore.Authorization;
+using Application.Authorization;
 
 namespace API.Controllers
 {
-    [Route("api/users")]
+    [Route("api/auth")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class AuthController : ControllerBase
     {
         private readonly IUsersRepository _usersRepository;
         private readonly UsersService _usersService;
 
-        public UsersController(IUsersRepository usersRepo, UsersService usersService) 
+        public AuthController(IUsersRepository usersRepo, UsersService usersService) 
         {
             _usersRepository = usersRepo;
             _usersService = usersService;
@@ -25,7 +26,7 @@ namespace API.Controllers
         {
             var user = await _usersService.Register(request.UserName, request.Email, request.Password);
             if (user == null) return BadRequest();
-            return Ok(new UserResponse(user.UserName, user.Email, user.RoleId));
+            return Ok(new UserResponse(user.UserName, user.Email, user.Role!.Name));
         }
 
         [HttpPost]
@@ -36,6 +37,23 @@ namespace API.Controllers
 
             HttpContext.Response.Cookies.Append("tasty-cookies", token);
 
+            return Ok();
+        }
+
+        [HttpGet("check")]
+        [Authorize(Policy = "UserPolicy")]
+        public async Task<IActionResult> CheckAuth()
+        {
+            var userId = HttpContext.User.Claims.FirstOrDefault(c => c.Type == CustomClaims.UserId);
+            var user = await _usersRepository.GetByIdAsync(int.Parse(userId!.Value));
+            return Ok(new UserResponse(user!.UserName, user.Email, user.Role!.Name));
+        }
+
+        [HttpPost("logout")]
+        [Authorize(Policy = "UserPolicy")]
+        public async Task<IActionResult> Logout()
+        {
+            HttpContext.Response.Cookies.Delete("tasty-cookies");
             return Ok();
         }
     }

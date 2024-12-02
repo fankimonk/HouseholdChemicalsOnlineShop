@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Application\\Application.csproj": {}
+    "C:\\Dev\\Web\\OnlineShop\\backend\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Application\\Application.csproj": {
+    "C:\\Dev\\Web\\OnlineShop\\backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Dev\\Web\\OnlineShop\\backend\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Application\\Application.csproj",
+        "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Application\\obj\\",
+        "outputPath": "C:\\Dev\\Web\\OnlineShop\\backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,11 +29,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\DataAccess\\DataAccess.csproj"
+              "C:\\Dev\\Web\\OnlineShop\\backend\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj"
+              "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -90,14 +90,14 @@
         }
       }
     },
-    "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\DataAccess\\DataAccess.csproj": {
+    "C:\\Dev\\Web\\OnlineShop\\backend\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Dev\\Web\\OnlineShop\\backend\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\DataAccess\\obj\\",
+        "outputPath": "C:\\Dev\\Web\\OnlineShop\\backend\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -115,8 +115,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj"
+              "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -173,14 +173,14 @@
         }
       }
     },
-    "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj": {
+    "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
-        "outputPath": "C:\\Dev\\Web\\HouseholdChemicalsOnlineShop\\backend\\Domain\\obj\\",
+        "outputPath": "C:\\Dev\\Web\\OnlineShop\\backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kiril\\AppData\\Roaming\\NuGet\\NuGet.Config",

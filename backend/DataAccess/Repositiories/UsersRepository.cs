@@ -19,7 +19,7 @@ namespace DataAccess.Repositiories
             var createdUser = await _dbContext.Users.AddAsync(user);
             if (createdUser == null) return null;
             await _dbContext.SaveChangesAsync();
-            return createdUser.Entity;
+            return await _dbContext.Users.AsNoTracking().Include(u => u.Role).FirstOrDefaultAsync(u => u.Id == createdUser.Entity.Id);
         }
 
         public async Task DeleteAsync(int id)
@@ -40,35 +40,18 @@ namespace DataAccess.Repositiories
 
         public async Task<User?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Users.AsNoTracking().Include(u => u.Role).FirstOrDefaultAsync(u => u.Id == id);
         }
 
         public async Task<HashSet<Permissions>> GetUserPermissions(int id)
         {
-            //var user = await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
-            //if (user == null) return [];
-
-            //var role = user.Role;
-            //if (role == null) return [];
-
-            var user = await _dbContext.Users.AsNoTracking().Include(u => u.Role).ThenInclude(r => r!.Permissions).FirstOrDefaultAsync(u => u.Id == id);
+            var user = await _dbContext.Users.AsNoTracking()
+                .Include(u => u.Role)
+                .ThenInclude(r => r!.Permissions)
+                .FirstOrDefaultAsync(u => u.Id == id);
             if (user == null) return [];
 
             return user.Role!.Permissions.Select(p => (Permissions)p.Id).ToHashSet();
-
-            //var roles = await _dbContext.Users
-            //    .AsNoTracking()
-            //    .Include(u => u.Roles)
-            //    .ThenInclude(r => r.Permissions)
-            //    .Where(u => u.Id == id)
-            //    .Select(u => u.Roles)
-            //    .ToArrayAsync();
-
-            //return roles
-            //    .SelectMany(r => r)
-            //    .SelectMany(r => r.Permissions)
-            //    .Select(p => (Permissions)p.Id)
-            //    .ToHashSet();
         }
 
         public async Task<User?> UpdateAsync(int id, User user)
