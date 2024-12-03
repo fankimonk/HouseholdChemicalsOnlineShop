@@ -31,5 +31,10 @@ namespace DataAccess.Repositiories
         {
             return await _dbContext.Carts.AsNoTracking().FirstOrDefaultAsync(c => c.Id == id);
         }
+
+        public async Task<Cart?> GetByUserIdAsync(int userId)
+        {
+            return await _dbContext.Carts.AsNoTracking().FirstOrDefaultAsync(c => c.UserId == userId);
+        }
     }
 }

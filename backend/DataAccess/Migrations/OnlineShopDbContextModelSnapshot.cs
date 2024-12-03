@@ -283,17 +283,21 @@ namespace DataAccess.Migrations
 
             modelBuilder.Entity("Domain.Models.CartProduct", b =>
                 {
-                    b.HasOne("Domain.Models.Cart", null)
-                        .WithMany()
+                    b.HasOne("Domain.Models.Cart", "Cart")
+                        .WithMany("CartProducts")
                         .HasForeignKey("CartId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Domain.Models.Product", null)
-                        .WithMany()
+                    b.HasOne("Domain.Models.Product", "Product")
+                        .WithMany("CartProducts")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Cart");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Domain.Models.Product", b =>
@@ -346,9 +350,19 @@ namespace DataAccess.Migrations
                     b.Navigation("Products");
                 });
 
+            modelBuilder.Entity("Domain.Models.Cart", b =>
+                {
+                    b.Navigation("CartProducts");
+                });
+
             modelBuilder.Entity("Domain.Models.Category", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("Domain.Models.Product", b =>
+                {
+                    b.Navigation("CartProducts");
                 });
 
             modelBuilder.Entity("Domain.Models.Role", b =>

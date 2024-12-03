@@ -1,7 +1,7 @@
-import React from "react";
 import "./ProductCard.css";
+import AddToCartButton from "./AddToCartButton/AddToCartButton";
 
-const ProductCard = ({ product, user }) => {
+const ProductCard = ({ product, user, isInCart, onAddToCart, onDeleteFromCart }) => {
     const {
         id,
         name,
@@ -20,12 +20,13 @@ const ProductCard = ({ product, user }) => {
             </div>
             <div className="product-actions">
                 <p className="product-price">{price} ₽</p>
-                {user ? (
-                    <button className="add-to-cart-button">В корзину</button>
-                ) : (
-                    <button className="add-to-cart-button-unauth">Вы не вошли в аккаунт</button>
-                )}
-
+                <AddToCartButton
+                    productId={id}
+                    user={user}
+                    isInCart={isInCart}
+                    onAddToCart={onAddToCart}
+                    onDeleteFromCart={onDeleteFromCart}
+                />
             </div>
         </div>
     );

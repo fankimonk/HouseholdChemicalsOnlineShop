@@ -18,6 +18,6 @@
         public int BrandId { get; set; }
         public Brand? Brand { get; set; }
 
-        public List<Cart> Carts { get; set; } = [];
+        public List<CartProduct> CartProducts { get; set; } = [];
     }
 }

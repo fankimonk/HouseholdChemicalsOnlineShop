@@ -1,39 +1,8 @@
 import "./FilterPanel.css";
 import CategoryCheckbox from "./CategoryCheckbox";
-import { useState, useEffect } from 'react'
-import { getAllCategories } from '../Services/Categories'
-import { getAllBrands } from '../Services/Brands'
 import BrandCheckbox from "./BrandCheckbox";
 
-const FilterPanel = ({ onCategoryChange, onBrandChange }) => {
-    const [categories, setCategories] = useState([]);
-    const [categoriesLoading, setCategoriesLoading] = useState(true);
-
-    const [brands, setBrands] = useState([]);
-    const [brandsLoading, setBrandsLoading] = useState(true);
-
-    useEffect(() => {
-        const getCategories = async () => {
-            setCategoriesLoading(true);
-            const response = await getAllCategories();
-            setCategories(response);
-            setCategoriesLoading(false);
-        }
-
-        getCategories();
-    }, []);
-
-    useEffect(() => {
-        const getBrands = async () => {
-            setBrandsLoading(true);
-            const response = await getAllBrands();
-            setBrands(response);
-            setBrandsLoading(false);
-        }
-
-        getBrands();
-    }, []);
-
+const FilterPanel = ({ categories, brands, onCategoryChange, onBrandChange }) => {
     return (
         <aside className="filter-panel">
             <div className="filter-section">

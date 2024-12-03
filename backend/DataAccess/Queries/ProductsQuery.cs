@@ -6,8 +6,6 @@
 
         public string SearchQuery { get; set; } = string.Empty;
 
-        public bool IsDescending { get; set; } = false;
-
         public int[] CategoryIds = [];
         public int[] BrandIds = [];
     };

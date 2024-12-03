@@ -2,7 +2,7 @@ import "./Header.css";
 import LoginButton from "./LoginButton/LoginButton"
 import RegisterButton from "./RegisterButton/RegisterButton";
 
-const Header = ({ user, onLogout, onLoginClick, onRegisterClick }) => {
+const Header = ({ user, onCartOpen, onLogout, onLoginClick, onRegisterClick }) => {
     return (
         <header className="header">
             <div className="left-section">
@@ -15,8 +15,8 @@ const Header = ({ user, onLogout, onLoginClick, onRegisterClick }) => {
             </div>
             {user ? (
                 <div className="right-section">
-                    <p className="username">{user.userName}</p>
-                    <button className="button">Корзина</button>
+                    <p className="username">{user.role == "Admin" ? user.userName + " (Admin)" : user.userName}</p>
+                    <button className="button" onClick={onCartOpen}>Корзина</button>
                     <button className="button" onClick={onLogout}>Выйти</button>
                 </div>
             ) : (

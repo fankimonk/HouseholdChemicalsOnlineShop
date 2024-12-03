@@ -131,6 +131,58 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API.Controllers.CartsController",
+    "Method": "AddProduct",
+    "RelativePath": "api/carts/{productId}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.CartsController",
+    "Method": "DeleteProduct",
+    "RelativePath": "api/carts/{productId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "productId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.CartsController",
+    "Method": "GetProductIds",
+    "RelativePath": "api/carts/getproductids",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.CartsController",
+    "Method": "GetProducts",
+    "RelativePath": "api/carts/getproducts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API.Controllers.CategoriesController",
     "Method": "GetAll",
     "RelativePath": "api/categories",

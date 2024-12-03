@@ -1,24 +1,8 @@
 import React from "react";
 import "./ProductCardContainer.css";
 import ProductCard from "./ProductCard/ProductCard";
-import { useState, useEffect } from "react";
-import { getAllProducts } from "../Services/Products";
 
-const ProductCardContainer = ({ user }) => {
-    const [products, setProducts] = useState([]);
-    const [productsLoading, setProductsLoading] = useState(true);
-
-    const getProducts = async () => {
-        setProductsLoading(true);
-        const response = await getAllProducts();
-        setProducts(response);
-        setProductsLoading(false);
-    }
-
-    useEffect(() => {
-        getProducts();
-    }, []);
-
+const ProductCardContainer = ({ products, cartProducts, user, onAddToCart, onDeleteFromCart }) => {
     return (
         <div className="product-card-container">
             {products.map((product) => (
@@ -26,6 +10,9 @@ const ProductCardContainer = ({ user }) => {
                     key={product.id}
                     product={product}
                     user={user}
+                    isInCart={cartProducts.some(cartProduct => cartProduct.id === product.id)}
+                    onAddToCart={onAddToCart}
+                    onDeleteFromCart={onDeleteFromCart}
                 />
             ))}
         </div>
