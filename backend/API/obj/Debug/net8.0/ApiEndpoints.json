@@ -164,16 +164,6 @@
   },
   {
     "ContainingType": "API.Controllers.CartsController",
-    "Method": "GetProductIds",
-    "RelativePath": "api/carts/getproductids",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "API.Controllers.CartsController",
     "Method": "GetProducts",
     "RelativePath": "api/carts/getproducts",
     "HttpMethod": "GET",
@@ -268,7 +258,33 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchQuery",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CategoryIds",
+        "Type": "System.Int32[]",
+        "IsRequired": false
+      },
+      {
+        "Name": "BrandIds",
+        "Type": "System.Int32[]",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

@@ -1,4 +1,5 @@
-﻿using Application.Interfaces;
+﻿using Application.Helpers;
+using Application.Interfaces;
 using DataAccess.Interfaces;
 using Domain.Enums;
 using Domain.Models;
@@ -32,21 +33,21 @@ namespace Application.Services
             return await _usersRepository.CreateAsync(user);
         }
 
-        public async Task<string> Login(string email, string password)
+        public async Task<AuthorizationResult> Login(string email, string password)
         {
             var user = await _usersRepository.GetByEmailAsync(email);
             if (user == null)
             {
-                throw new Exception("user not found"); //Поменять
+                return AuthorizationResult.UserNotFound;
             }
 
             var result = _passwordHasher.Verify(password, user.PasswordHash);
             if (result == false)
             {
-                throw new Exception("failed to login"); //Поменять
+                return AuthorizationResult.WrongPassword;
             }
 
-            return _jwtProvider.GenerateToken(user);
+            return AuthorizationResult.Succeed(_jwtProvider.GenerateToken(user));
         }
     }
 }

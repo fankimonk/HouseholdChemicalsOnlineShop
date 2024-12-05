@@ -13,59 +13,6 @@ import { getAllBrands } from './Services/Brands'
 import { addProductToCart, deleteProductFromCart } from "./Services/Cart";
 
 function App() {
-  //#region Products
-  const [products, setProducts] = useState([]);
-  const [productsLoading, setProductsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      setProductsLoading(true);
-      const response = await getAllProducts();
-      setProducts(response);
-      console.log(response);
-      setProductsLoading(false);
-    }
-
-    fetchProducts();
-  }, []);
-  //#endregion
-
-  //#region Cart
-  const [isCartPanelOpen, setIsCartPanelOpen] = useState(false);
-  const [cartProducts, setCartProducts] = useState([]);
-  const [cartProductsLoading, setCartProductsLoading] = useState(true);
-
-  const fetchCartProducts = async () => {
-    setCartProductsLoading(true);
-    const response = await getProductsInCart();
-    setCartProducts(response);
-    console.log(response);
-    setCartProductsLoading(false);
-  };
-
-  useEffect(() => {
-    fetchCartProducts();
-  }, []);
-
-  const addCartProduct = async (id) => {
-    await addProductToCart(id);
-    fetchCartProducts();
-  };
-
-  const deleteCartProduct = async (id) => {
-    await deleteProductFromCart(id);
-    fetchCartProducts();
-  };
-
-  const openCartPanel = async () => {
-    setIsCartPanelOpen(true);
-  };
-
-  const closeCartPanel = () => {
-    setIsCartPanelOpen(false);
-  };
-  //#endregion
-
   //#region Categories and Brands
   const [categories, setCategories] = useState([]);
   const [categoriesLoading, setCategoriesLoading] = useState(true);
@@ -111,7 +58,7 @@ function App() {
     }
 
     setSelectedCategories(selectedCategories);
-    console.log(selectedCategories);
+    fetchProducts();
   };
 
   const [selectedBrands, setSelectedBrands] = useState([]);
@@ -128,7 +75,99 @@ function App() {
     }
 
     setSelectedBrands(selectedBrands);
-    console.log(selectedBrands);
+    fetchProducts();
+  };
+  //#endregion
+
+  //#region Products
+  const [products, setProducts] = useState([]);
+  const [productsLoading, setProductsLoading] = useState(true);
+  const [searchQuery, setSearchQuery] = useState(null);
+
+  useEffect(() => {
+    if (searchQuery !== null) {
+      fetchProducts();
+    }
+  }, [searchQuery]);
+
+  const fetchProducts = async () => {
+    setProductsLoading(true);
+    const response = await getAllProducts({
+      searchQuery: searchQuery,
+      categoryIds: selectedCategories,
+      brandIds: selectedBrands
+    });
+    setProducts(response);
+    setProductsLoading(false);
+  };
+
+  const onSearch = (searchQuery) => {
+    setSearchQuery(searchQuery);
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+  //#endregion
+
+  //#region User
+  const [user, setUser] = useState(null);
+
+  const fetchUser = async () => {
+    const userResponse = await authCheck();
+    setUser(userResponse);
+  };
+
+  useEffect(() => {
+    fetchUser();
+  }, []);
+
+  const onLogin = async () => {
+    closeAuthPanel();
+    fetchUser();
+  }
+
+  useEffect(() => {
+    fetchCartProducts();
+  }, [user]);
+
+  const onLogout = async () => {
+    await logout();
+    fetchUser();
+    setCartProducts([]);
+  };
+  //#endregion
+
+  //#region Cart
+  const [isCartPanelOpen, setIsCartPanelOpen] = useState(false);
+  const [cartProducts, setCartProducts] = useState([]);
+  const [cartProductsLoading, setCartProductsLoading] = useState(true);
+
+  const fetchCartProducts = async () => {
+    if (user) {
+      setCartProductsLoading(true);
+      const response = await getProductsInCart();
+      setCartProducts(response);
+      setCartProductsLoading(false);
+    }
+  };
+
+  const addCartProduct = async (id) => {
+    await addProductToCart(id);
+    fetchCartProducts();
+  };
+
+  const deleteCartProduct = async (id) => {
+    await deleteProductFromCart(id);
+    fetchCartProducts();
+  };
+
+  const openCartPanel = async () => {
+    setIsCartPanelOpen(true);
+  };
+
+  const closeCartPanel = () => {
+    setIsCartPanelOpen(false);
   };
   //#endregion
 
@@ -151,34 +190,17 @@ function App() {
   };
   //#endregion
 
-  //#region User
-  const [user, setUser] = useState(null);
-
-  const fetchUser = async () => {
-    const userResponse = await authCheck();
-    setUser(userResponse);
-  };
-
-  useEffect(() => {
-    fetchUser();
-  }, []);
-
-  const onLogout = async () => {
-    await logout();
-    fetchUser();
-  };
-  //#endregion
-
   return (
     <>
       <Header
+        onSearch={onSearch}
         user={user}
         onCartOpen={openCartPanel}
         onLogout={onLogout}
         onLoginClick={openLoginPanel}
         onRegisterClick={openRegisterPanel}
       />
-      {isAuthPanelOpen && (<AuthPanel isLogin={isLogin} onClose={closeAuthPanel} />)}
+      {isAuthPanelOpen && (<AuthPanel isLogin={isLogin} onLogin={onLogin} onClose={closeAuthPanel} />)}
       {isCartPanelOpen && (
         <CartPanel
           products={cartProducts}

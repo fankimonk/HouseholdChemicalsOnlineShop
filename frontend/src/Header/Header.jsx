@@ -1,17 +1,13 @@
 import "./Header.css";
 import LoginButton from "./LoginButton/LoginButton"
 import RegisterButton from "./RegisterButton/RegisterButton";
+import SearchField from "./SearchField/SearchField";
 
-const Header = ({ user, onCartOpen, onLogout, onLoginClick, onRegisterClick }) => {
+const Header = ({ onSearch, user, onCartOpen, onLogout, onLoginClick, onRegisterClick }) => {
     return (
         <header className="header">
             <div className="left-section">
-                <input
-                    type="text"
-                    placeholder="Поиск..."
-                    className="search-input"
-                />
-                <button className="button">Поиск</button>
+                <SearchField onSearch={onSearch} />
             </div>
             {user ? (
                 <div className="right-section">

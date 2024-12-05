@@ -6,7 +6,7 @@
 
         public string SearchQuery { get; set; } = string.Empty;
 
-        public int[] CategoryIds = [];
-        public int[] BrandIds = [];
+        public int[] CategoryIds { get; set; } = [];
+        public int[] BrandIds { get; set; } = [];
     };
 }

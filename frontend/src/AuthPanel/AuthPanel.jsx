@@ -3,7 +3,7 @@ import "./AuthPanel.css";
 import LoginPanel from "./LoginPanel/LoginPanel";
 import RegisterPanel from "./RegisterPanel/RegisterPanel";
 
-const AuthPanel = ({ isLogin, onClose }) => {
+const AuthPanel = ({ isLogin, onLogin, onClose }) => {
     const [isLoginPanel, setIsLoginPanel] = useState(isLogin);
 
     const openLoginPanel = () => {
@@ -17,7 +17,7 @@ const AuthPanel = ({ isLogin, onClose }) => {
     return (
         <div className="auth-container" onClick={onClose}>
             {isLoginPanel ? (
-                <LoginPanel onRegisterPanel={openRegisterPanel} />
+                <LoginPanel onLogin={onLogin} onRegisterPanel={openRegisterPanel} />
             ) : (
                 <RegisterPanel onLoginPanel={openLoginPanel} />
             )}

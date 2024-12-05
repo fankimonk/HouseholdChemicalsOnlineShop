@@ -1,6 +1,8 @@
 ﻿using DataAccess.Interfaces;
+using DataAccess.Queries;
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace DataAccess.Repositiories
 {
@@ -30,6 +32,24 @@ namespace DataAccess.Repositiories
         public async Task<List<Product>> GetAllAsync()
         {
             return await _dbContext.Products.AsNoTracking().ToListAsync();
+        }
+
+        public async Task<List<Product>> GetAllAsync(ProductsQuery query)
+        {
+            var productsQueryable = _dbContext.Products.AsNoTracking();
+
+            if (query.SearchQuery.IsNullOrEmpty() == false)
+                productsQueryable = productsQueryable.Where(p => p.Name.Contains(query.SearchQuery));
+
+            if (query.CategoryIds.Length != 0)
+                productsQueryable = productsQueryable.Where(p => query.CategoryIds.Contains(p.CategoryId));
+
+            if (query.BrandIds.Length != 0)
+                productsQueryable = productsQueryable.Where(p => query.BrandIds.Contains(p.BrandId));
+
+            var skipNumber = (query.PageNumber - 1) * query.PageSize;
+
+            return await productsQueryable.Skip(skipNumber).Take(query.PageSize).ToListAsync();
         }
 
         public async Task<Product?> GetByIdAsync(int id)

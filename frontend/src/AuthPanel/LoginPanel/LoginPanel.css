@@ -64,3 +64,13 @@
 .link:hover {
     color: #0056b3;
 }
+
+.inline-group {
+    display: flex;
+    align-items: center;
+}
+
+.error-text {
+    color: red;
+    font-size: 0.9em;
+}

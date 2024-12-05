@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using API.Contracts.Product;
+using DataAccess.Queries;
 
 namespace API.Controllers
 {
@@ -19,9 +20,12 @@ namespace API.Controllers
 
         [HttpGet]
         //[Authorize(Policy = "UserPolicy")]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] ProductsQuery query)
         {
-            var products = await _productsRepository.GetAllAsync();
+            Console.WriteLine(query.SearchQuery);
+            Console.WriteLine(query.CategoryIds.Length);
+            Console.WriteLine(query.BrandIds.Length);
+            var products = await _productsRepository.GetAllAsync(query);
             var productsResponse = products.Select(p => new ProductResponse(p.Id, p.Name, p.Description, p.ImagePath, p.Price, p.StockQuantity, p.CategoryId, p.BrandId));
             return Ok(productsResponse);
         }

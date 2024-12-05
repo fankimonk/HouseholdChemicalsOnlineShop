@@ -33,9 +33,11 @@ namespace API.Controllers
         [Route("login")]
         public async Task<IActionResult> Login(LoginUserRequest request)
         {
-            var token = await _usersService.Login(request.Email, request.Password);
+            var result = await _usersService.Login(request.Email, request.Password);
 
-            HttpContext.Response.Cookies.Append("tasty-cookies", token);
+            if (result.Error != null) return BadRequest(result.Error);
+
+            HttpContext.Response.Cookies.Append("tasty-cookies", result.Token);
 
             return Ok();
         }
