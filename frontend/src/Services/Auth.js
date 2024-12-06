@@ -16,6 +16,16 @@ export const login = async (loginRequest) => {
     });
 }
 
+export const register = async (registerRequest) => {
+    return await fetch("/api/auth/register", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(registerRequest)
+    })
+}
+
 export const logout = async () => {
     await fetch("/api/auth/logout", { method: "POST" });
 }

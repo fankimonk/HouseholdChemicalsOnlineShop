@@ -1,11 +1,77 @@
 {
   "Version": 1,
-  "Hash": "bUm1vPqwZHJejLhtNIB7WgmMI8ngxypkYrDApg4MvgQ=",
+  "Hash": "JWzItpkrakk2PzmvewAUbszacS1Vtep+3/UbWyAwf6c=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "API\\wwwroot",
+      "Source": "API",
+      "ContentRoot": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\aos_aloe_450ml.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/aos_aloe_450ml.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\aos_aloe_450ml.jpg"
+    },
+    {
+      "Identity": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\fairy_apple_900ml.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/fairy_apple_900ml.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fairy_apple_900ml.jpg"
+    },
+    {
+      "Identity": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\fairy_orange_450ml.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/fairy_orange_450ml.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\fairy_orange_450ml.jpg"
+    }
+  ]
 }

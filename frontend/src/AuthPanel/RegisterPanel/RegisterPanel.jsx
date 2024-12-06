@@ -1,22 +1,74 @@
+import { login, register } from "../../Services/Auth";
+import FormInput from "../FormInput/FormInput";
 import "./RegisterPanel.css";
+import { useState } from "react";
 
-const RegisterPanel = ({ onLoginPanel }) => {
+const RegisterPanel = ({ onLogin, onLoginPanel }) => {
+    const [showPassword, setShowPassword] = useState(false);
+    const [error, setError] = useState(null);
+
+    const onRegisterClick = async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.target);
+        const registerRequest = {
+            userName: formData.get('userName'),
+            email: formData.get('email'),
+            password: formData.get('password'),
+        };
+
+        const registerResponse = await register(registerRequest);
+        if (!registerResponse.ok) {
+            const errorText = await registerResponse.text();
+            setError(errorText);
+            return;
+        }
+
+        const loginResponse = await login({
+            email: registerRequest.email,
+            password: registerRequest.password
+        });
+        if (!loginResponse.ok) {
+            const errorText = await loginResponse.text();
+            setError(errorText);
+            return;
+        }
+
+        onLogin();
+        setError(null);
+    };
+
     return (
         <div className="register-panel" onClick={(e) => e.stopPropagation()}>
             <h2>Регистрация</h2>
-            <form>
+            <form onSubmit={onRegisterClick}>
+                <FormInput
+                    labelText={"Имя пользователя"}
+                    placeholderText={"Введите ваше имя"}
+                    type={"text"}
+                    name={"userName"}
+                />
+                <FormInput
+                    labelText={"Электронная почта"}
+                    placeholderText={"Введите вашу почту"}
+                    type={"email"}
+                    name={"email"}
+                />
+                <FormInput
+                    labelText={"Пароль"}
+                    placeholderText={"Введите ваш пароль"}
+                    type={showPassword ? "text" : "password"}
+                    name={"password"}
+                />
                 <div className="form-group">
-                    <label>Имя пользователя</label>
-                    <input type="text" placeholder="Введите ваше имя" required />
+                    <label>Показать пароль</label>
+                    <input
+                        type="checkbox"
+                        checked={showPassword}
+                        onChange={() => setShowPassword(!showPassword)}
+                    />
                 </div>
-                <div className="form-group">
-                    <label>Электронная почта</label>
-                    <input type="email" placeholder="Введите вашу почту" required />
-                </div>
-                <div className="form-group">
-                    <label>Пароль</label>
-                    <input type="password" placeholder="Введите ваш пароль" required />
-                </div>
+                {error && (<p className="error-text">{error}</p>)}
                 <button type="submit" className="btn">
                     Зарегистрироваться
                 </button>

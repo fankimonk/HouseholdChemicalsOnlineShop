@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using API.Contracts.User;
 using Microsoft.AspNetCore.Authorization;
 using Application.Authorization;
+using Microsoft.IdentityModel.Tokens;
 
 namespace API.Controllers
 {
@@ -24,8 +25,10 @@ namespace API.Controllers
         [Route("register")]
         public async Task<IActionResult> Register(RegisterUserRequest request)
         {
-            var user = await _usersService.Register(request.UserName, request.Email, request.Password);
-            if (user == null) return BadRequest();
+            var registrationResult = await _usersService.Register(request.UserName, request.Email, request.Password);
+            if (registrationResult.Error != null || registrationResult.User == null) return BadRequest(registrationResult.Error);
+
+            var user = registrationResult.User;
             return Ok(new UserResponse(user.UserName, user.Email, user.Role!.Name));
         }
 
@@ -35,7 +38,7 @@ namespace API.Controllers
         {
             var result = await _usersService.Login(request.Email, request.Password);
 
-            if (result.Error != null) return BadRequest(result.Error);
+            if (result.Error != null || result.Token.IsNullOrEmpty()) return BadRequest(result.Error);
 
             HttpContext.Response.Cookies.Append("tasty-cookies", result.Token);
 

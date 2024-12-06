@@ -457,3 +457,4 @@ C:\Dev\Web\OnlineShop\backend\API\obj\Debug\net8.0\refint\API.dll
 C:\Dev\Web\OnlineShop\backend\API\obj\Debug\net8.0\API.pdb
 C:\Dev\Web\OnlineShop\backend\API\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Dev\Web\OnlineShop\backend\API\obj\Debug\net8.0\ref\API.dll
+C:\Dev\Web\OnlineShop\backend\API\bin\Debug\net8.0\API.staticwebassets.runtime.json

@@ -28,6 +28,12 @@ namespace DataAccess.Repositiories
             await _dbContext.SaveChangesAsync();
         }
 
+        public async Task<bool> EmailExistsAsync(string email)
+        {
+            var user = await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Email == email);
+            return user != null;
+        }
+
         public async Task<List<User>> GetAllAsync()
         {
             throw new NotImplementedException();
@@ -57,6 +63,12 @@ namespace DataAccess.Repositiories
         public async Task<User?> UpdateAsync(int id, User user)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<bool> UsernameExistsAsync(string userName)
+        {
+            var user = await _dbContext.Users.AsNoTracking().FirstOrDefaultAsync(u => u.UserName == userName);
+            return user != null;
         }
     }
 }

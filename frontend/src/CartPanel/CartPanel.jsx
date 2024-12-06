@@ -15,7 +15,7 @@ const CartPanel = ({ products, onClose, onDeleteFromCart }) => {
                         />
                     ))}
                 </div>
-                <button className="order-button">Заказать</button>
+                <button className="order-button" onClick={() => alert("Товары заказаны!")}>Заказать</button>
             </div>
         </div>
     );

@@ -1,19 +1,26 @@
 import "./ProductCard.css";
 import AddToCartButton from "./AddToCartButton/AddToCartButton";
+import { useEffect } from "react";
 
 const ProductCard = ({ product, user, isInCart, onAddToCart, onDeleteFromCart }) => {
     const {
         id,
         name,
         description,
-        image,
+        imagePath,
         price,
         stockQuantity
     } = product;
 
+    let imageUrl = `/images${imagePath}`
+
+    useEffect(() => {
+        console.log(imageUrl);
+    }, []);
+
     return (
         <div className="product-card">
-            <img src={image} alt={name} className="product-image" />
+            <img src={imageUrl} alt={name} className="product-image" />
             <div className="product-info">
                 <h2 className="product-title">{name}</h2>
                 <p className="product-description">{description}</p>

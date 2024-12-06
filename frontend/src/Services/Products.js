@@ -25,6 +25,5 @@ export const getAllProducts = async (query) => {
     const queryString = queryParams.length > 0 ? `?${queryParams.join("&")}` : "";
     const uri = `/api/products${queryString}`;
     const response = await fetch(uri, { method: "GET" });
-    console.log(uri);
     return await response.json();
 }

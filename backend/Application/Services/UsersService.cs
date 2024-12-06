@@ -22,15 +22,21 @@ namespace Application.Services
             _jwtProvider = jwtProvider;
         }
 
-        public async Task<User?> Register(string userName, string email, string password)
+        public async Task<RegistrationResult> Register(string userName, string email, string password)
         {
             var hashedPassword = _passwordHasher.Generate(password);
+
+            if (await _usersRepository.UsernameExistsAsync(userName)) return RegistrationResult.UsernameTaken;
+            if (await _usersRepository.EmailExistsAsync(email)) return RegistrationResult.EmailTaken;
 
             var user = new User { UserName = userName, PasswordHash = hashedPassword, Email = email, RoleId = (int)Roles.User };
             var cart = new Cart { User = user };
             user.Cart = cart;
 
-            return await _usersRepository.CreateAsync(user);
+            var createdUser = await _usersRepository.CreateAsync(user);
+            if (createdUser == null) return RegistrationResult.FailedToCreate;
+
+            return RegistrationResult.Succeed(createdUser);
         }
 
         public async Task<AuthorizationResult> Login(string email, string password)

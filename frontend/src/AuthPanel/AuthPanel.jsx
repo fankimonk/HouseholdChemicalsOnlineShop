@@ -19,7 +19,7 @@ const AuthPanel = ({ isLogin, onLogin, onClose }) => {
             {isLoginPanel ? (
                 <LoginPanel onLogin={onLogin} onRegisterPanel={openRegisterPanel} />
             ) : (
-                <RegisterPanel onLoginPanel={openLoginPanel} />
+                <RegisterPanel onLogin={onLogin} onLoginPanel={openLoginPanel} />
             )}
         </div>
     );

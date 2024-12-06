@@ -12,5 +12,7 @@ namespace DataAccess.Interfaces
         Task<User?> CreateAsync(User user);
         Task<User?> UpdateAsync(int id, User user);
         Task DeleteAsync(int id);
+        Task<bool> UsernameExistsAsync(string userName);
+        Task<bool> EmailExistsAsync(string emal);
     }
 }

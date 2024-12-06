@@ -1,6 +1,7 @@
 import "./LoginPanel.css";
 import { useState } from "react";
 import { login } from "../../Services/Auth";
+import FormInput from "../FormInput/FormInput";
 
 const LoginPanel = ({ onLogin, onRegisterPanel }) => {
     const [showPassword, setShowPassword] = useState(false);
@@ -30,33 +31,25 @@ const LoginPanel = ({ onLogin, onRegisterPanel }) => {
         <div className="login-panel" onClick={(e) => e.stopPropagation()}>
             <h2>Авторизация</h2>
             <form onSubmit={onLoginClick}>
+                <FormInput
+                    labelText={"Электронная почта"}
+                    placeholderText={"Введите вашу почту"}
+                    type={"text"}
+                    name={"email"}
+                />
+                <FormInput
+                    labelText={"Пароль"}
+                    placeholderText={"Введите ваш пароль"}
+                    type={showPassword ? "text" : "password"}
+                    name={"password"}
+                />
                 <div className="form-group">
-                    <label>Электронная почта</label>
+                    <label>Показать пароль</label>
                     <input
-                        type="text"
-                        name="email"
-                        placeholder="Введите вашу почту"
-                        required
+                        type="checkbox"
+                        checked={showPassword}
+                        onChange={() => setShowPassword(!showPassword)}
                     />
-                </div>
-                <div className="form-group">
-                    <label>Пароль</label>
-                    <input
-                        type={showPassword ? "text" : "password"}
-                        name="password"
-                        placeholder="Введите ваш пароль"
-                        required
-                    />
-                </div>
-                <div className="form-group">
-                    <div className="inline-group">
-                        <label>Показать пароль</label>
-                        <input
-                            type="checkbox"
-                            checked={showPassword}
-                            onChange={() => setShowPassword(!showPassword)}
-                        />
-                    </div>
                 </div>
                 {error && (<p className="error-text">{error}</p>)}
                 <button type="submit" className="btn">
