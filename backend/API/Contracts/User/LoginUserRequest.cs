@@ -3,7 +3,11 @@
 namespace API.Contracts.User
 {
     public record LoginUserRequest(
-        [Required] string Email,
-        [Required] string Password
+        [Required]
+        [EmailAddress(ErrorMessage = "Input email address")]
+        string Email,
+
+        [Required] 
+        string Password
         );
 }

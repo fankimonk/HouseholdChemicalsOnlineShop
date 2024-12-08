@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard/ProductCard";
 const ProductCardContainer = ({ products, cartProducts, user, onAddToCart, onDeleteFromCart }) => {
     return (
         <div className="product-card-container">
-            {products.map((product) => (
+            {products.map((product, index) => (
                 <ProductCard
                     key={product.id}
                     product={product}
@@ -13,6 +13,7 @@ const ProductCardContainer = ({ products, cartProducts, user, onAddToCart, onDel
                     isInCart={cartProducts.some(cartProduct => cartProduct.id === product.id)}
                     onAddToCart={onAddToCart}
                     onDeleteFromCart={onDeleteFromCart}
+                    animationDelay={`${index * 0.1}s`} // Передаём задержку
                 />
             ))}
         </div>

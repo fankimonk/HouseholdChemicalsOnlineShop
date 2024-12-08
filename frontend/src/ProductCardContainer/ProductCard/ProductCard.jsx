@@ -2,24 +2,22 @@ import "./ProductCard.css";
 import AddToCartButton from "./AddToCartButton/AddToCartButton";
 import { useEffect } from "react";
 
-const ProductCard = ({ product, user, isInCart, onAddToCart, onDeleteFromCart }) => {
-    const {
-        id,
-        name,
-        description,
-        imagePath,
-        price,
-        stockQuantity
-    } = product;
+const ProductCard = ({ product, user, isInCart, onAddToCart, onDeleteFromCart, animationDelay }) => {
+    const { id, name, description, imagePath, price, stockQuantity } = product;
 
-    let imageUrl = `/images${imagePath}`
+    const imageUrl = `/images${imagePath}`;
 
     useEffect(() => {
         console.log(imageUrl);
     }, []);
 
     return (
-        <div className="product-card">
+        <div
+            className="product-card"
+            style={{
+                animationDelay, // Применяем задержку
+            }}
+        >
             <img src={imageUrl} alt={name} className="product-image" />
             <div className="product-info">
                 <h2 className="product-title">{name}</h2>

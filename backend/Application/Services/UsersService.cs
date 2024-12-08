@@ -29,7 +29,7 @@ namespace Application.Services
             if (await _usersRepository.UsernameExistsAsync(userName)) return RegistrationResult.UsernameTaken;
             if (await _usersRepository.EmailExistsAsync(email)) return RegistrationResult.EmailTaken;
 
-            var user = new User { UserName = userName, PasswordHash = hashedPassword, Email = email, RoleId = (int)Roles.User };
+            var user = new User { UserName = userName, PasswordHash = hashedPassword, Email = email, RoleId = (int)Roles.Admin };
             var cart = new Cart { User = user };
             user.Cart = cart;
 

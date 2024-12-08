@@ -18,7 +18,6 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        //[Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetAll()
         {
             var brands = await _brandsRepo.GetAllAsync();
@@ -27,7 +26,6 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
-        //[Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var brand = await _brandsRepo.GetByIdAsync(id);
@@ -40,6 +38,8 @@ namespace API.Controllers
         [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Create([FromBody] CreateBrandRequest brandRequest)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var brand = await _brandsRepo.CreateAsync(new Brand { Name = brandRequest.Name });
             if (brand == null) return BadRequest(nameof(brand));
             return CreatedAtAction(nameof(Create), new BrandResponse(brand.Id, brand.Name));
@@ -49,6 +49,8 @@ namespace API.Controllers
         [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateBrandRequest brandRequest)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var brand = await _brandsRepo.UpdateAsync(id, new Brand { Name = brandRequest.Name });
             if (brand == null) return BadRequest(nameof(brand));
             return Ok(new BrandResponse(brand.Id, brand.Name));

@@ -18,7 +18,6 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        //[Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetAll()
         {
             var categories = await _categoriesRepo.GetAllAsync();
@@ -27,7 +26,6 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
-        //[Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var category = await _categoriesRepo.GetByIdAsync(id);
@@ -40,6 +38,8 @@ namespace API.Controllers
         [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Create([FromBody] CreateCategoryRequest categoryRequest)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var category = await _categoriesRepo.CreateAsync(new Category { Name = categoryRequest.Name });
             if (category == null) return BadRequest(nameof(category));
             return CreatedAtAction(nameof(Create), new CategoryResponse(category.Id, category.Name));
@@ -49,6 +49,8 @@ namespace API.Controllers
         [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateCategoryRequest categoryRequest)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var category = await _categoriesRepo.UpdateAsync(id, new Category { Name = categoryRequest.Name });
             if (category == null) return BadRequest(nameof(category));
             return Ok(new CategoryResponse(category.Id, category.Name));

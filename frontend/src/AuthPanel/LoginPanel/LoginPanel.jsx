@@ -1,40 +1,18 @@
 import "./LoginPanel.css";
 import { useState } from "react";
-import { login } from "../../Services/Auth";
 import FormInput from "../FormInput/FormInput";
 
-const LoginPanel = ({ onLogin, onRegisterPanel }) => {
+const LoginPanel = ({ onLogin, onRegisterPanel, error }) => {
     const [showPassword, setShowPassword] = useState(false);
-    const [error, setError] = useState(null);
-
-    const onLoginClick = async (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(e.target);
-        const loginRequest = {
-            email: formData.get('email'),
-            password: formData.get('password'),
-        };
-
-        const response = await login(loginRequest);
-        if (!response.ok) {
-            const errorText = await response.text();
-            setError(errorText);
-            return;
-        }
-
-        onLogin();
-        setError(null);
-    };
 
     return (
         <div className="login-panel" onClick={(e) => e.stopPropagation()}>
             <h2>Авторизация</h2>
-            <form onSubmit={onLoginClick}>
+            <form onSubmit={onLogin}>
                 <FormInput
                     labelText={"Электронная почта"}
                     placeholderText={"Введите вашу почту"}
-                    type={"text"}
+                    type={"email"}
                     name={"email"}
                 />
                 <FormInput

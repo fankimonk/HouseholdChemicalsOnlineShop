@@ -19,19 +19,14 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        //[Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetAll([FromQuery] ProductsQuery query)
         {
-            Console.WriteLine(query.SearchQuery);
-            Console.WriteLine(query.CategoryIds.Length);
-            Console.WriteLine(query.BrandIds.Length);
             var products = await _productsRepository.GetAllAsync(query);
             var productsResponse = products.Select(p => new ProductResponse(p.Id, p.Name, p.Description, p.ImagePath, p.Price, p.StockQuantity, p.CategoryId, p.BrandId));
             return Ok(productsResponse);
         }
 
         [HttpGet("{id}")]
-        //[Authorize(Policy = "UserPolicy")]
         public async Task<IActionResult> GetById([FromRoute] int id)
         {
             var product = await _productsRepository.GetByIdAsync(id);
@@ -46,6 +41,8 @@ namespace API.Controllers
         [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Create([FromBody] CreateProductRequest productRequest)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var product = await _productsRepository.CreateAsync(new Product { 
                 Name = productRequest.Name,
                 Description = productRequest.Description,
@@ -65,6 +62,8 @@ namespace API.Controllers
         [Authorize(Policy = "AdminPolicy")]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateProductRequest productRequest)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var product = await _productsRepository.UpdateAsync(id, new Product
             {
                 Name = productRequest.Name,

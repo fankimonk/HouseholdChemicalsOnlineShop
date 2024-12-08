@@ -1,3 +1,15 @@
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 /* Карточка продукта */
 .product-card {
     display: flex;
@@ -12,6 +24,10 @@
     max-width: 100%;
     /* Для адаптивности */
     box-sizing: border-box;
+    animation: slideIn 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    /* Чтобы скрывать карточку до анимации */
 }
 
 .product-card:hover {

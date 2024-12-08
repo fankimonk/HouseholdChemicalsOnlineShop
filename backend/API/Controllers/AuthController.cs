@@ -25,6 +25,8 @@ namespace API.Controllers
         [Route("register")]
         public async Task<IActionResult> Register(RegisterUserRequest request)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var registrationResult = await _usersService.Register(request.UserName, request.Email, request.Password);
             if (registrationResult.Error != null || registrationResult.User == null) return BadRequest(registrationResult.Error);
 
@@ -36,6 +38,8 @@ namespace API.Controllers
         [Route("login")]
         public async Task<IActionResult> Login(LoginUserRequest request)
         {
+            if (!ModelState.IsValid) return BadRequest(ModelState);
+
             var result = await _usersService.Login(request.Email, request.Password);
 
             if (result.Error != null || result.Token.IsNullOrEmpty()) return BadRequest(result.Error);
