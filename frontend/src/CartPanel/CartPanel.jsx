@@ -7,13 +7,17 @@ const CartPanel = ({ products, onClose, onDeleteFromCart }) => {
             <div className="cart-panel" onClick={(e) => e.stopPropagation()}>
                 <h2 className="cart-title">Корзина</h2>
                 <div className="products">
-                    {products.map((product) => (
-                        <CartProductCard
-                            key={product.id}
-                            product={product}
-                            onDeleteFromCart={onDeleteFromCart}
-                        />
-                    ))}
+                    {products.length == 0 ? (
+                        <p style={{ color: "grey" }}>Корзина пуста</p>
+                    ) : (
+                        products.map((product) => (
+                            <CartProductCard
+                                key={product.id}
+                                product={product}
+                                onDeleteFromCart={onDeleteFromCart}
+                            />
+                        ))
+                    )}
                 </div>
                 <button className="order-button" onClick={() => alert("Товары заказаны!")}>Заказать</button>
             </div>

@@ -1,9 +1,21 @@
 .product-card-container {
     margin-left: 20%;
-    margin-top: 60px;
+    margin-top: calc(var(--header-height, 60px));
+    /* Учитываем высоту хедера через переменную */
     padding: 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Адаптация для узких экранов */
+@media (max-width: 768px) {
+    .product-card-container {
+        margin-left: 0;
+        /* Убираем боковой отступ */
+        margin-top: 0;
+        /* Убираем отступ сверху */
+    }
 }

@@ -1,5 +1,7 @@
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
 export const authCheck = async () => {
-    const response = await fetch("/api/auth/check", { method: "GET" });
+    const response = await fetch(`${apiBaseUrl}/api/auth/check`, { method: "GET" });
     if (!response.ok) {
         return null;
     }
@@ -7,7 +9,7 @@ export const authCheck = async () => {
 }
 
 export const login = async (loginRequest) => {
-    return await fetch("/api/auth/login", {
+    return await fetch(`${apiBaseUrl}/api/auth/login`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -17,7 +19,7 @@ export const login = async (loginRequest) => {
 }
 
 export const register = async (registerRequest) => {
-    return await fetch("/api/auth/register", {
+    return await fetch(`${apiBaseUrl}/api/auth/register`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -27,5 +29,5 @@ export const register = async (registerRequest) => {
 }
 
 export const logout = async () => {
-    await fetch("/api/auth/logout", { method: "POST" });
+    await fetch(`${apiBaseUrl}/api/auth/logout`, { method: "POST" });
 }

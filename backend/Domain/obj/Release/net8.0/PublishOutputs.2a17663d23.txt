@@ -1,0 +1,3 @@
+C:\Dev\Web\OnlineShop\backend\publish\Domain.dll
+C:\Dev\Web\OnlineShop\backend\publish\Domain.deps.json
+C:\Dev\Web\OnlineShop\backend\publish\Domain.pdb

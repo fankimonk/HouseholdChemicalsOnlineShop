@@ -7,10 +7,6 @@ const ProductCard = ({ product, user, isInCart, onAddToCart, onDeleteFromCart, a
 
     const imageUrl = `/images${imagePath}`;
 
-    useEffect(() => {
-        console.log(imageUrl);
-    }, []);
-
     return (
         <div
             className="product-card"

@@ -1,0 +1,53 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\aos_aloe_450ml.jpg",
+      "PackagePath": "staticwebassets\\images\\aos_aloe_450ml.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\chair_meister_cloud.jpg",
+      "PackagePath": "staticwebassets\\images\\chair_meister_cloud.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\chair_meister_nature_2.jpg",
+      "PackagePath": "staticwebassets\\images\\chair_meister_nature_2.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\chair_meister_nature_2_default.jpg",
+      "PackagePath": "staticwebassets\\images\\chair_meister_nature_2_default.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\fairy_apple_900ml.jpg",
+      "PackagePath": "staticwebassets\\images\\fairy_apple_900ml.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\fairy_orange_450ml.jpg",
+      "PackagePath": "staticwebassets\\images\\fairy_orange_450ml.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\zarechie_komod.jpg",
+      "PackagePath": "staticwebassets\\images\\zarechie_komod.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\zarechie_mirror.jpg",
+      "PackagePath": "staticwebassets\\images\\zarechie_mirror.jpg"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.API.props",
+      "PackagePath": "build\\API.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.API.props",
+      "PackagePath": "buildMultiTargeting\\API.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.API.props",
+      "PackagePath": "buildTransitive\\API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

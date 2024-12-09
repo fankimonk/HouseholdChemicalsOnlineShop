@@ -1,19 +1,20 @@
-/* Общие стили для панели фильтрации */
 .filter-panel {
     position: fixed;
-    top: 60px;
-    /* Отступ под header */
+    top: var(--header-height, 60px);
+    /* Располагаем под хедером */
     left: 0;
     width: 20%;
-    height: calc(100% - 60px);
-    /* Высота экрана за вычетом header */
+    height: calc(100% - var(--header-height, 60px));
+    /* Учитываем высоту хедера */
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1), -2px 0 5px rgba(0, 0, 0, 0.1);
     padding: 20px;
     overflow-y: auto;
-    /* Скролл, если содержимое больше высоты */
     box-sizing: border-box;
+    transition: all 0.3s ease;
+    z-index: 9;
+    /* Панель фильтрации ниже хедера */
 }
 
 /* Секция фильтра */
@@ -36,4 +37,22 @@
 
 .filter-section label input {
     margin-right: 10px;
+}
+
+/* Адаптация для узких экранов */
+@media (max-width: 768px) {
+    .filter-panel {
+        position: static;
+        /* Переход в обычное позиционирование */
+        width: 100%;
+        /* Занимает всю ширину */
+        height: auto;
+        /* Высота зависит от содержимого */
+        margin-top: calc(var(--header-height, 60px));
+        /* Отступ для сохранения расстояния от хедера */
+        margin-bottom: 20px;
+        /* Отступ снизу для разделения с карточками */
+        box-shadow: none;
+        /* Убираем тень для мобильной версии */
+    }
 }

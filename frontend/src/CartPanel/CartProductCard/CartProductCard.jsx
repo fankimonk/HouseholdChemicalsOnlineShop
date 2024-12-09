@@ -1,14 +1,9 @@
 import "./CartProductCard.css";
 
 const CartProductCard = ({ product, onDeleteFromCart }) => {
-    const {
-        id,
-        name,
-        description,
-        image,
-        price,
-        stockQuantity
-    } = product;
+    const { id, name, description, imagePath, price, stockQuantity } = product;
+
+    const imageUrl = `/images${imagePath}`;
 
     const onDelete = async () => {
         await onDeleteFromCart(id);
@@ -16,7 +11,7 @@ const CartProductCard = ({ product, onDeleteFromCart }) => {
 
     return (
         <div className="cartproduct-card">
-            <img src={image} alt={name} className="cartproduct-image" />
+            <img src={imageUrl} alt={name} className="cartproduct-image" />
             <div className="cartproduct-details">
                 <span className="cartproduct-name">{name}</span>
                 <span className="cartproduct-price">{price} ₽</span>

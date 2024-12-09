@@ -1,3 +1,5 @@
+const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
 export const getAllProducts = async (query) => {
     const { pageNumber, pageSize, searchQuery, categoryIds, brandIds } = query;
 
@@ -23,7 +25,7 @@ export const getAllProducts = async (query) => {
     }
 
     const queryString = queryParams.length > 0 ? `?${queryParams.join("&")}` : "";
-    const uri = `/api/products${queryString}`;
+    const uri = `${apiBaseUrl}/api/products${queryString}`;
     const response = await fetch(uri, { method: "GET" });
     return await response.json();
 }
