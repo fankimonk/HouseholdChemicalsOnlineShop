@@ -93,6 +93,12 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Http.Features/5.0.17": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0",
+          "System.IO.Pipelines": "6.0.3"
+        }
+      },
       "Microsoft.AspNetCore.Metadata/8.0.10": {
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.Metadata.dll": {
@@ -960,6 +966,7 @@
           "DataAccess": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.AspNetCore.Authorization": "8.0.10",
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.IdentityModel.Tokens": "7.1.2",
           "System.IdentityModel.Tokens.Jwt": "7.1.2"
         },
@@ -1039,6 +1046,13 @@
       "sha512": "sha512-mENBehQP1H9oTB4Diu1l7vR1BeZrBNWA9sHZsln4l2oIs7D3qH3fokopU/8FWa9JSxQYNBT1MeYBCwguYOBjMQ==",
       "path": "microsoft.aspnetcore.authorization/8.0.10",
       "hashPath": "microsoft.aspnetcore.authorization.8.0.10.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/5.0.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3jG2xS+dx8DDCGV/F+STdPTg89lX3ao3dF/VEPvJaz3wzBIjuadipTtYNEXDIVuOPZwb6jdmhrX9jkzOIBm5cw==",
+      "path": "microsoft.aspnetcore.http.features/5.0.17",
+      "hashPath": "microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Metadata/8.0.10": {
       "type": "package",

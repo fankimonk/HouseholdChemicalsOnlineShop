@@ -10,7 +10,7 @@ namespace DataAccess.Configurations
         {
             builder.HasKey(p => p.Id);
 
-            builder.Property(p => p.Price).HasColumnType("decimal(10,2)");
+            builder.Property(p => p.Price).HasColumnType("decimal(18,2)");
 
             builder.HasOne(p => p.Category).WithMany(c => c.Products).HasForeignKey(p => p.CategoryId);
             builder.HasOne(p => p.Brand).WithMany(b => b.Products).HasForeignKey(p => p.BrandId);

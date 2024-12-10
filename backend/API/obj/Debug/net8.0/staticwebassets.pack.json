@@ -17,12 +17,20 @@
       "PackagePath": "staticwebassets\\images\\chair_meister_nature_2_default.jpg"
     },
     {
+      "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\cif_clean_glass.jpg",
+      "PackagePath": "staticwebassets\\images\\cif_clean_glass.jpg"
+    },
+    {
       "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\fairy_apple_900ml.jpg",
       "PackagePath": "staticwebassets\\images\\fairy_apple_900ml.jpg"
     },
     {
       "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\fairy_orange_450ml.jpg",
       "PackagePath": "staticwebassets\\images\\fairy_orange_450ml.jpg"
+    },
+    {
+      "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\kreda_antiseptik.jpg",
+      "PackagePath": "staticwebassets\\images\\kreda_antiseptik.jpg"
     },
     {
       "Id": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\zarechie_komod.jpg",

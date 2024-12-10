@@ -3,6 +3,8 @@ import "./AuthPanel.css";
 import LoginPanel from "./LoginPanel/LoginPanel";
 import RegisterPanel from "./RegisterPanel/RegisterPanel";
 import { login, register } from "../Services/Auth";
+import Form from "../Form/Form";
+import Overlay from "../Overlay/Overlay";
 
 const AuthPanel = ({ isLogin, onLogin, onClose }) => {
     const [isLoginPanel, setIsLoginPanel] = useState(isLogin);
@@ -57,13 +59,19 @@ const AuthPanel = ({ isLogin, onLogin, onClose }) => {
     }
 
     return (
-        <div className="auth-container" onClick={onClose}>
-            {isLoginPanel ? (
-                <LoginPanel onLogin={onLoginClick} onRegisterPanel={openRegisterPanel} error={errorText} />
-            ) : (
-                <RegisterPanel onRegister={onRegisterClick} onLoginPanel={openLoginPanel} error={errorText} />
-            )}
-        </div>
+        <Overlay onClose={onClose}>
+            <Form
+                header={isLoginPanel ? "Авторизация" : "Регистрация"}
+                submitButtonText={isLoginPanel ? "Авторизоваться" : "Зарегистрироваться"}
+                onSubmit={isLoginPanel ? onLoginClick : onRegisterClick}
+            >
+                {isLoginPanel ? (
+                    <LoginPanel onRegisterPanel={openRegisterPanel} error={errorText} />
+                ) : (
+                    <RegisterPanel onLoginPanel={openLoginPanel} error={errorText} />
+                )}
+            </Form>
+        </Overlay>
     );
 };
 

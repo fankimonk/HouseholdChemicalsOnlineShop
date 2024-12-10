@@ -29,3 +29,23 @@ export const getAllProducts = async (query) => {
     const response = await fetch(uri, { method: "GET" });
     return await response.json();
 }
+
+export const createProduct = async (createProductForm) => {
+    return await fetch(`${apiBaseUrl}/api/products`, {
+        method: "POST",
+        body: createProductForm,
+        headers: {}
+    });
+}
+
+export const updateProduct = async (id, updateProductForm) => {
+    return await fetch(`${apiBaseUrl}/api/products/${id}`, {
+        method: "PUT",
+        headers: {},
+        body: updateProductForm
+    });
+}
+
+export const deleteProduct = async (id) => {
+    return await fetch(`${apiBaseUrl}/api/products/${id}`, { method: "DELETE" });
+}

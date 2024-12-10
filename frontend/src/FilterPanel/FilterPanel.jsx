@@ -2,11 +2,16 @@ import "./FilterPanel.css";
 import CategoryCheckbox from "./CategoryCheckbox";
 import BrandCheckbox from "./BrandCheckbox";
 
-const FilterPanel = ({ categories, brands, onCategoryChange, onBrandChange }) => {
+const FilterPanel = ({ user, categories, brands, onCategoryChange, onBrandChange }) => {
     return (
         <aside className="filter-panel">
             <div className="filter-section">
-                <h3 className="filter-title">Категории</h3>
+                <div className="filter-header">
+                    <h3 className="filter-title">Категории</h3>
+                    {user && user.role == "Admin" && <button className="add-btn">
+                        Добавить
+                    </button>}
+                </div>
                 {categories.map((category) => (
                     <CategoryCheckbox
                         key={category.id}
@@ -16,7 +21,12 @@ const FilterPanel = ({ categories, brands, onCategoryChange, onBrandChange }) =>
                 ))}
             </div>
             <div className="filter-section">
-                <h3 className="filter-title">Бренды</h3>
+                <div className="filter-header">
+                    <h3 className="filter-title">Бренды</h3>
+                    {user && user.role == "Admin" && <button className="add-btn">
+                        Добавить
+                    </button>}
+                </div>
                 {brands.map((brand) => (
                     <BrandCheckbox
                         key={brand.id}
@@ -25,7 +35,7 @@ const FilterPanel = ({ categories, brands, onCategoryChange, onBrandChange }) =>
                     />
                 ))}
             </div>
-        </aside>
+        </aside >
     );
 };
 

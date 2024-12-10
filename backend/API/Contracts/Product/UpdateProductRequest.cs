@@ -10,9 +10,6 @@ namespace API.Contracts.Product
         [Required]
         string Description,
 
-        [Required]  
-        string ImagePath,
-
         [Required]
         [Range(0.0d, 10000.0d, ErrorMessage = "Price must not be less than 0 and more than 10000")]
         decimal Price,

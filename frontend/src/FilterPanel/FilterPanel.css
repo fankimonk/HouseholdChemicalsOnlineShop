@@ -17,6 +17,13 @@
     /* Панель фильтрации ниже хедера */
 }
 
+.filter-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
 /* Секция фильтра */
 .filter-section {
     margin-bottom: 20px;
@@ -33,6 +40,25 @@
     display: block;
     margin-bottom: 8px;
     font-size: 14px;
+}
+
+/* Кнопка "Добавить" */
+.add-btn {
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    /* Оставлено: предотвращает перенос текста */
+    flex-shrink: 0;
+    /* Добавлено: кнопки не сжимаются */
+}
+
+.add-btn:hover {
+    background-color: #0056b3;
 }
 
 .filter-section label input {

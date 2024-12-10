@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2bJTv16UYL1LnGTAzNvKy9l7eKOZNoh6QO804+tNl1k=",
+  "Hash": "TMzheIOoghsO2XYbQkyV7c1A/bMCpM7RLy+RDGLf5UA=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -93,6 +93,25 @@
       "OriginalItemSpec": "wwwroot\\images\\chair_meister_nature_2_default.jpg"
     },
     {
+      "Identity": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\cif_clean_glass.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/cif_clean_glass.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cif_clean_glass.jpg"
+    },
+    {
       "Identity": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\fairy_apple_900ml.jpg",
       "SourceId": "API",
       "SourceType": "Discovered",
@@ -129,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\fairy_orange_450ml.jpg"
+    },
+    {
+      "Identity": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\kreda_antiseptik.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "images/kreda_antiseptik.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\kreda_antiseptik.jpg"
     },
     {
       "Identity": "C:\\Dev\\Web\\OnlineShop\\backend\\API\\wwwroot\\images\\zarechie_komod.jpg",

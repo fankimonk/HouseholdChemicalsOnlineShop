@@ -1,17 +1,4 @@
-.form-group {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 0.9em;
-    color: #555;
-}
-
-.form-group input {
+.input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -21,7 +8,7 @@
     /* Для равномерного отступа справа */
 }
 
-.form-group input:focus {
+.input:focus {
     border-color: #007bff;
     outline: none;
 }

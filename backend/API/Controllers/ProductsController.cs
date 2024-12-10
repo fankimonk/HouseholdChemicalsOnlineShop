@@ -4,6 +4,7 @@ using Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using API.Contracts.Product;
 using DataAccess.Queries;
+using Application.Interfaces;
 
 namespace API.Controllers
 {
@@ -12,10 +13,14 @@ namespace API.Controllers
     public class ProductsController : ControllerBase
     {
         private readonly IProductsRepository _productsRepository;
+        private readonly IProductsService _productsService;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProductsController(IProductsRepository productsRepo)
+        public ProductsController(IProductsRepository productsRepo, IProductsService productsService, IWebHostEnvironment webHostEnvironment)
         {
             _productsRepository = productsRepo;
+            _productsService = productsService;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         [HttpGet]
@@ -39,28 +44,21 @@ namespace API.Controllers
 
         [HttpPost]
         [Authorize(Policy = "AdminPolicy")]
-        public async Task<IActionResult> Create([FromBody] CreateProductRequest productRequest)
+        public async Task<IActionResult> Create([FromForm] CreateProductRequest productRequest)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (!ModelState.IsValid) return BadRequest("ывмыв");
 
-            var product = await _productsRepository.CreateAsync(new Product { 
-                Name = productRequest.Name,
-                Description = productRequest.Description,
-                ImagePath = productRequest.ImagePath,
-                Price = productRequest.Price,
-                StockQuantity = productRequest.StockQuantity,
-                CategoryId = productRequest.CategoryId,
-                BrandId = productRequest.BrandId
-                });
-            if (product == null) return BadRequest(nameof(product));
-            return CreatedAtAction(nameof(Create), new ProductResponse(
-                product.Id, product.Name, product.Description, product.ImagePath, 
-                product.Price, product.StockQuantity, product.CategoryId, product.BrandId));
+            var webRootPath = _webHostEnvironment.WebRootPath;
+
+            var product = await _productsService.CreateProduct(productRequest.Name, productRequest.Description, productRequest.Image, 
+                productRequest.Price, productRequest.StockQuantity, productRequest.CategoryId, productRequest.BrandId, webRootPath);
+
+            return Ok();
         }
 
         [HttpPut("{id}")]
         [Authorize(Policy = "AdminPolicy")]
-        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] UpdateProductRequest productRequest)
+        public async Task<IActionResult> Update([FromRoute] int id, [FromForm] UpdateProductRequest productRequest)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
@@ -68,7 +66,6 @@ namespace API.Controllers
             {
                 Name = productRequest.Name,
                 Description = productRequest.Description,
-                ImagePath = productRequest.ImagePath,
                 Price = productRequest.Price,
                 StockQuantity = productRequest.StockQuantity,
                 CategoryId = productRequest.CategoryId,

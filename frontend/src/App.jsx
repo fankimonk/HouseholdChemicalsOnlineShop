@@ -11,6 +11,9 @@ import { getAllProducts } from "./Services/Products";
 import { getAllCategories } from './Services/Categories'
 import { getAllBrands } from './Services/Brands'
 import { addProductToCart, deleteProductFromCart } from "./Services/Cart";
+import AddProductButton from './AdminComponents/AddProductButton/AddProductButton'
+import EditProductPanel from './AdminComponents/EditProductPanel/EditProductPanel'
+import AddProductPanel from './AdminComponents/AddProductPanel/AddProductPanel'
 
 function App() {
   //#region Categories and Brands
@@ -190,6 +193,27 @@ function App() {
   };
   //#endregion
 
+  //#region EditProduct
+  const [isAddProductPanelOpen, setIsAddProductPanelOpen] = useState(false);
+  const [isEditProductPanelOpen, setIsEditProductPanelOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const openAddProductPanel = () => {
+    setIsAddProductPanelOpen(true);
+  }
+
+  const openEditProductPanel = (product) => {
+    setSelectedProduct(product);
+    setIsEditProductPanelOpen(true);
+  }
+
+  const closeProductPanel = () => {
+    setIsAddProductPanelOpen(false);
+    setIsEditProductPanelOpen(false);
+  }
+
+  //#endregion
+
   return (
     <>
       <Header
@@ -208,6 +232,7 @@ function App() {
           onDeleteFromCart={deleteCartProduct}
         />)}
       < FilterPanel
+        user={user}
         categories={categories}
         brands={brands}
         onCategoryChange={onCategoryChange}
@@ -219,7 +244,29 @@ function App() {
         user={user}
         onAddToCart={addCartProduct}
         onDeleteFromCart={deleteCartProduct}
+        onDeleteProduct={fetchProducts}
+        onOpenEditPanel={openEditProductPanel}
       />
+      {user && user.role == "Admin" && (<AddProductButton onClick={openAddProductPanel} />)}
+      {isAddProductPanelOpen &&
+        <AddProductPanel
+          header={"Добавить товар"}
+          submitButtonText={"Добавить"}
+          categories={categories}
+          brands={brands}
+          onAdd={fetchProducts}
+          onClose={closeProductPanel}
+        />}
+      {isEditProductPanelOpen &&
+        <EditProductPanel
+          product={selectedProduct}
+          header={"Изменить товар"}
+          submitButtonText={"Изменить"}
+          categories={categories}
+          brands={brands}
+          onEdit={fetchProducts}
+          onClose={closeProductPanel}
+        />}
     </>
   )
 }

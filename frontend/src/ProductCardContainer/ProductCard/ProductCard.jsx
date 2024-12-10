@@ -1,11 +1,21 @@
 import "./ProductCard.css";
 import AddToCartButton from "./AddToCartButton/AddToCartButton";
 import { useEffect } from "react";
+import { deleteProduct } from "../../Services/Products";
 
-const ProductCard = ({ product, user, isInCart, onAddToCart, onDeleteFromCart, animationDelay }) => {
+const ProductCard = ({ product, user, isInCart, onOpenEditPanel, onAddToCart, onDeleteFromCart, onDeleteProduct, animationDelay }) => {
     const { id, name, description, imagePath, price, stockQuantity } = product;
 
     const imageUrl = `/images${imagePath}`;
+
+    const onEditPanel = () => {
+        onOpenEditPanel(product);
+    }
+
+    const onDeleteClick = async () => {
+        await deleteProduct(id);
+        await onDeleteProduct();
+    }
 
     return (
         <div
@@ -28,6 +38,14 @@ const ProductCard = ({ product, user, isInCart, onAddToCart, onDeleteFromCart, a
                     onAddToCart={onAddToCart}
                     onDeleteFromCart={onDeleteFromCart}
                 />
+                {user && user.role == "Admin" &&
+                    <button className="edit-product-btn" onClick={onEditPanel}>
+                        Изменить
+                    </button>}
+                {user && user.role == "Admin" &&
+                    <button className="delete-product-btn" onClick={onDeleteClick}>
+                        Удалить
+                    </button>}
             </div>
         </div>
     );

@@ -1,32 +1,3 @@
-.register-panel {
-    width: 300px;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-}
-
-.register-panel h2 {
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-.btn {
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
 .link {
     color: #007bff;
     cursor: pointer;

@@ -33,9 +33,13 @@ builder.Services.AddScoped<IBrandsRepository, BrandsRepository>();
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 builder.Services.AddScoped<ICartsRepository, CartsRepository>();
 builder.Services.AddScoped<ICartProductsRepository, CartProductsRepository>();
+builder.Services.AddScoped<IOrdersRepository, OrdersRepository>();
+builder.Services.AddScoped<IOrderProductsRepository, OrderProductsRepository>();
 
 builder.Services.AddScoped<IUsersService, UsersService>();
 builder.Services.AddScoped<ICartsService, CartsService>();
+builder.Services.AddScoped<IOrdersService, OrdersService>();
+builder.Services.AddScoped<IProductsService, ProductsService>();
 
 builder.Services.AddScoped<IJwtProvider, JwtProvider>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();

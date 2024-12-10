@@ -57,6 +57,32 @@ namespace DataAccess.Repositiories
             return await _dbContext.Products.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
         }
 
+        public async Task<List<Product>> GetByIdsAsync(int[] ids)
+        {
+            return await _dbContext.Products.AsNoTracking().Where(p => ids.Contains(p.Id)).ToListAsync();
+        }
+
+        public async Task<bool> TryDecrementStockQuantities(int[] productIds)
+        {
+            await _dbContext.BeginTranscationAsync();
+
+            foreach (var productId in productIds)
+            {
+                var product = await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == productId);
+                if (product == null || product.StockQuantity <= 0)
+                {
+                    await _dbContext.RollbackAsync();
+                    return false;
+                }
+                product.StockQuantity -= 1;
+            }
+
+            await _dbContext.SaveChangesAsync();
+            await _dbContext.CommitAsync();
+
+            return true;
+        }
+
         public async Task<Product?> UpdateAsync(int id, Product product)
         {
             var updatedProduct = await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == id);
@@ -64,7 +90,6 @@ namespace DataAccess.Repositiories
 
             updatedProduct.Name = product.Name;
             updatedProduct.Description = product.Description;
-            updatedProduct.ImagePath = product.ImagePath;
             updatedProduct.Price = product.Price;
             updatedProduct.StockQuantity = product.StockQuantity;
             updatedProduct.CategoryId = product.CategoryId;

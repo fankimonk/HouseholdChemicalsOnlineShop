@@ -9,13 +9,6 @@ namespace DataAccess.Configurations
         public void Configure(EntityTypeBuilder<Cart> builder)
         {
             builder.HasKey(c => c.Id);
-
-            //builder
-            //    .HasMany(c => c.Products)
-            //    .WithMany(p => p.Carts)
-            //    .UsingEntity<CartProduct>(
-            //        l => l.HasOne<Product>().WithMany().HasForeignKey(p => p.ProductId),
-            //        r => r.HasOne<Cart>().WithMany().HasForeignKey(c => c.CartId));
         }
     }
 }

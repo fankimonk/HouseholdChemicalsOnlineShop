@@ -1,27 +1,27 @@
 import "./LoginPanel.css";
 import { useState } from "react";
-import FormInput from "../FormInput/FormInput";
+import FormInput from "../../Form/FormInput/FormInput";
+import FormElement from "../../Form/FormElement/FormElement";
 
-const LoginPanel = ({ onLogin, onRegisterPanel, error }) => {
+const LoginPanel = ({ onRegisterPanel, error }) => {
     const [showPassword, setShowPassword] = useState(false);
 
     return (
-        <div className="login-panel" onClick={(e) => e.stopPropagation()}>
-            <h2>Авторизация</h2>
-            <form onSubmit={onLogin}>
-                <FormInput
-                    labelText={"Электронная почта"}
-                    placeholderText={"Введите вашу почту"}
-                    type={"email"}
-                    name={"email"}
-                />
-                <FormInput
-                    labelText={"Пароль"}
-                    placeholderText={"Введите ваш пароль"}
-                    type={showPassword ? "text" : "password"}
-                    name={"password"}
-                />
-                <div className="form-group">
+        <>
+            <FormInput
+                labelText={"Электронная почта"}
+                placeholderText={"Введите вашу почту"}
+                type={"email"}
+                name={"email"}
+            />
+            <FormInput
+                labelText={"Пароль"}
+                placeholderText={"Введите ваш пароль"}
+                type={showPassword ? "text" : "password"}
+                name={"password"}
+            />
+            <FormElement>
+                <div>
                     <label>Показать пароль</label>
                     <input
                         type="checkbox"
@@ -29,18 +29,17 @@ const LoginPanel = ({ onLogin, onRegisterPanel, error }) => {
                         onChange={() => setShowPassword(!showPassword)}
                     />
                 </div>
-                {error && (<p className="error-text">{error}</p>)}
-                <button type="submit" className="btn">
-                    Авторизоваться
-                </button>
-            </form>
+            </FormElement>
             <p>
                 Нет аккаунта?{" "}
                 <span className="link" onClick={onRegisterPanel}>
                     Зарегистрироваться
                 </span>
             </p>
-        </div >
+            {error && (
+                <p className="error-text">{error}</p>
+            )}
+        </>
     );
 }
 
